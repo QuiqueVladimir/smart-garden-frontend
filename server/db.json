@@ -1,0 +1,187 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "type": "Expert",
+      "name": "John Doe",
+      "subscription": "premium"
+    },
+    {
+      "id": 2,
+      "type": "Beginner",
+      "name": "Jane Smith",
+      "subscription": "Beginner"
+    },
+    {
+      "id": 3,
+      "type": "Beginner",
+      "name": "Sam Thompson",
+      "subscription": "Beginner"
+    },
+    {
+      "id": 4,
+      "type": "Beginner",
+      "name": "Sara Johnson",
+      "subscription": "Beginner"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "profileId": 1,
+      "email": "john@example.com",
+      "password": "passwordEncryptada"
+    },
+    {
+      "id": 2,
+      "profileId": 2,
+      "email": "JaneDoe@example.com",
+      "password": "passwordEncryptada"
+    },
+    {
+      "id": 3,
+      "profileId": 3,
+      "email": "SamThom@exaple.com",
+      "password": "passwordEncryptada"
+    },
+    {
+      "id": 4,
+      "profileId": 4,
+      "email": "SaraJhonson@example.com",
+      "password": "passwordEncryptada"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "image.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5
+    }
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "title": "Module 1: Getting Started with Hydroponics",
+      "video": "https://www.youtube.com/watch?v=1",
+      "transcription": "module.txt",
+      "images": ["image1.jpg", "image2.jpg"],
+      "links": ["https://www.google.com", "https://www.youtube.com"],
+      "status": "Approved"
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "title": "Module 2: Hydroponic Systems",
+      "video": "https://www.youtube.com/watch?v=2",
+      "transcription": "module.txt",
+      "images": ["image1.jpg", "image2.jpg"],
+      "links": ["https://www.google.com", "https://www.youtube.com"],
+      "status": "pending"
+    }
+  ],
+  "progress": [
+    {
+      "userId": 2,
+      "courseId": 1,
+      "moduleId": 1,
+      "status": "Completed"
+    },
+    {
+      "userId": 2,
+      "courseId": 1,
+      "moduleId": 2,
+      "status": "In Progress"
+    },
+    {
+      "userId": 3,
+      "courseId": 1,
+      "moduleId": 1,
+      "status": "In Progress"
+    },
+    {
+      "userId": 4,
+      "courseId": 1,
+      "moduleId": 2,
+      "status": "In Progress"
+    }
+  ],
+  "purchased_courses": [
+    {
+      "id": 1,
+      "userId": 2,
+      "courseId": 1,
+      "date": "2021-01-01 12:00:00"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "courseId": 1,
+      "date": "2021-01-01 12:00:00"
+    }
+  ],
+  "communities": [
+    {
+      "id": 1,
+      "expertId": 1,
+      "courseId": 1,
+      "title": "Hydroponics Community",
+      "description": "A community for hydroponics enthusiasts",
+      "image": "image.jpg",
+      "membersId": [2, 3, 4],
+      "fixedMessageId": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "image": ["image1.jpg", "image2.jpg"],
+      "date": "2021-01-01 12:00:00",
+      "likes": 5,
+      "parentCommentId": 2
+    }
+  ],
+  "stores": [
+    {
+      "id": 1,
+      "expertId": 1,
+      "products": [1]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Hydroponic Starter Kit",
+      "description": "A starter kit for hydroponics",
+      "front": "image.jpg",
+      "price": 50,
+      "image": ["image1.jpg", "image2.jpg"],
+      "document": ["doc1.pdf", "doc2.pdf"],
+      "text": ["text1", "text2"]
+    }
+  ],
+  "purchased_products": [
+    {
+      "id": 1,
+      "userId": 2,
+      "productId": 1,
+      "date": "2021-01-01 12:00:00"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "userId": 2,
+      "type": "premium",
+      "date": "2021-01-01 12:00:00"
+    }
+  ]
+}
