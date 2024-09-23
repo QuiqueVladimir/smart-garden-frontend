@@ -1,0 +1,20 @@
+<mat-card class="course-card">
+  <img mat-card-image src="{{ course.image }}" alt="{{ course.title }}" class="course-image">
+  <mat-card-title>
+    <span class="mat-headline-medium">{{ course.title }}
+      <span class="module-count">({{ course.numberModules }} modules)
+      </span>
+      </span>
+    <span class="rating-container">
+      <mat-icon style="color: #ffffff;" >star</mat-icon>
+      <span class="rating">{{course.rating}}</span>
+    </span>
+  </mat-card-title>
+  <mat-card-content>
+    <p>{{course.description}}</p>
+  </mat-card-content>
+  <mat-card-actions class="actions">
+    <button mat-button (click)="viewDetails()">View Details</button>
+    <button mat-button class="buy-button">Buy - Add ${{course.price}}</button>
+  </mat-card-actions>
+</mat-card>
