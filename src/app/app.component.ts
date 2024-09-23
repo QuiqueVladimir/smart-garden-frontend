@@ -12,7 +12,6 @@ import {TranslateService} from "@ngx-translate/core";
 export class AppComponent {
   title = 'smart-garden-spa';
   constructor(translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+
   }
 }

@@ -8,9 +8,10 @@ protected httpOptions={ headers: new HttpHeaders({'Content-Type':'application/js
 
 protected http:HttpClient = inject(HttpClient);
 
-protected basePath: string = `${environment.serverBasePath}`;
+protected basePath: string = `http://localhost:3000`;
 
 protected resourceEndPoint: string = '/resources';
+protected resourceEndPoint2: string = '/resources2';
 
 protected handleError(error: HttpErrorResponse){
   if(error.error instanceof ErrorEvent){
@@ -23,6 +24,10 @@ protected handleError(error: HttpErrorResponse){
 
 protected resourcePath(): string{
   return `${this.basePath}${this.resourceEndPoint}`;
+}
+
+protected resourcePath2(): string{
+  return `${this.basePath}${this.resourceEndPoint2}`;
 }
 
 public create(item: any): Observable<T>{
