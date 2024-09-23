@@ -1,0 +1,98 @@
+/* General Styles */
+
+mat-card {
+  max-width: 1000px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: aliceblue;
+  min-height: 800px;
+}
+
+.mat-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.mat-card-subtitle {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Video Container */
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.video-container p {
+  flex: 1;
+  margin: 0;
+  font-style: italic;
+  color: #666;
+}
+
+/* Navigation Buttons */
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navigation-buttons button {
+  margin: 5px;
+}
+
+/* Transcription Box */
+
+.transcription-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Image Gallery */
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.image-item {
+  margin: 5px;
+  width: calc(33% - 10px); /* Adjust based on desired image ratio */
+}
+
+.course-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Links Section */
+
+.links-section {
+  margin-bottom: 20px;
+}
+
+.links-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-section li {
+  margin-bottom: 5px;
+}
+
+.links-section a {
+  color: #333;
+  text-decoration: none;
+}
+
+.links-section a:hover {
+  text-decoration: underline;
+}

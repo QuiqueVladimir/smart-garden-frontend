@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>
+    {{module.title}}
+  </mat-card-title>
+  <mat-card-subtitle>
+    {{module.description}}
+  </mat-card-subtitle>
+  <div class="video-container">
+    <iframe width="560" height="315" [src]="safeVideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div class="navigation-buttons">
+    <button mat-raised-button color="primary" (click)="previousModule()">Previous</button>
+    <button mat-raised-button color="primary" (click)="nextModule()">Next</button>
+    <button mat-raised-button color="accent" (click)="goBackToCourse()">Back to Course</button>
+  </div>
+  <mat-card-content>
+    <div class="transcription-box">
+      <p>{{module.transcription}}</p>
+    </div>
+
+    <div class="image-gallery">
+      <div *ngFor="let image of module.images" class="image-item">
+        <img mat-card-image src="{{ image }}" alt="{{ module.title }}" class="course-image">
+      </div>
+    </div>
+
+    <div class="links-section">
+      <ul>
+        <li *ngFor="let link of module.links">
+          <a [href]="link" target="_blank">{{module.links}}</a>
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+</mat-card>
