@@ -1,0 +1,10 @@
+<div class="course-container">
+  <div *ngFor="let course of listCourses" class="course-card-container">
+    <app-course-card [course]="course"></app-course-card>
+  </div>
+</div>
+
+<mat-paginator [length]="totalCourses"
+               [pageSize]="coursesPerPage"
+               (page)="onPageChange($event)">
+</mat-paginator>
