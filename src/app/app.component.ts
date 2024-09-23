@@ -11,7 +11,7 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class AppComponent {
   title = 'smart-garden-spa';
-  constructor(translate: TranslateService) {
+  constructor() {
 
   }
 }
