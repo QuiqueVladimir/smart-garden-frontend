@@ -56,11 +56,56 @@
       "id": 1,
       "title": "Introduction to Hydropinics",
       "description": "Learn the basics of hydroponics",
-      "image": "image.jpg",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
       "expertId": 1,
       "communityId": 1,
       "price": 50,
-      "rating": 4.5
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 2,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 3,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 4,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 5,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
     }
   ],
   "modules": [
@@ -69,14 +114,34 @@
       "courseId": 1,
       "title": "Module 1: Getting Started with Hydroponics",
       "description": "Learn the basics of hydroponics",
-      "video": "https://www.youtube.com/watch?v=1",
-      "transcription": "module.txt",
-      "images": ["image1.jpg", "image2.jpg"],
+      "video": "https://www.youtube.com/embed/rnJlmDV2GBE?si=iUh89TDXHq_wwKXA",
+      "transcription": "SDSPDLSDPSLD",
+      "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
       "links": ["https://www.google.com", "https://www.youtube.com"]
     },
     {
       "id": 2,
       "courseId": 1,
+      "title": "Module 2: Hydroponic Systems",
+      "description": "Learn the basics of hydroponics",
+      "video": "https://www.youtube.com/watch?v=2",
+      "transcription": "module.txt",
+      "images": ["image1.jpg", "image2.jpg"],
+      "links": ["https://www.google.com", "https://www.youtube.com"]
+    },
+    {
+    "id": 3,
+    "courseId": 2,
+    "title": "Module 1: Getting Started with Hydroponics",
+    "description": "Learn the basics of hydroponics",
+    "video": "https://www.youtube.com/watch?v=1",
+    "transcription": "LWLDWMDWD",
+    "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
+    "links": ["https://www.google.com", "https://www.youtube.com"]
+    },
+    {
+      "id": 4,
+      "courseId": 2,
       "title": "Module 2: Hydroponic Systems",
       "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/watch?v=2",

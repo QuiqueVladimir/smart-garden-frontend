@@ -12,10 +12,21 @@ export class CourseService extends BaseService<Course>{
   constructor() {
     super();
     this.resourceEndPoint = '/courses';
+    this.resourceEndPoint2 = '/modules';
   }
 
-  public getModules(courseId: number): Observable<Module[]>{
+  public getModulesByCurseId(courseId: number): Observable<Module[]>{
     return this.http.get<Module[]>(`${this.resourcePath()}/${courseId}/modules`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  public getModuleById(moduleId: number): Observable<Module> {
+    return this.http.get<Module>(`${this.resourcePath2()}/${moduleId}/`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  public getCourseById(courseId: number): Observable<Course>{
+    return this.http.get<Course>(`${this.resourcePath()}/${courseId}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
