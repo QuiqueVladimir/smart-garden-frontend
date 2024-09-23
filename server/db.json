@@ -68,21 +68,21 @@
       "id": 1,
       "courseId": 1,
       "title": "Module 1: Getting Started with Hydroponics",
+      "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/watch?v=1",
       "transcription": "module.txt",
       "images": ["image1.jpg", "image2.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"],
-      "status": "Approved"
+      "links": ["https://www.google.com", "https://www.youtube.com"]
     },
     {
       "id": 2,
       "courseId": 1,
       "title": "Module 2: Hydroponic Systems",
+      "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/watch?v=2",
       "transcription": "module.txt",
       "images": ["image1.jpg", "image2.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"],
-      "status": "pending"
+      "links": ["https://www.google.com", "https://www.youtube.com"]
     }
   ],
   "progress": [
