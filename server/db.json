@@ -59,6 +59,17 @@
       "experience": "7 years",
       "timeToDedicate": "12 hours per week",
       "targetAgeRange": "45"
+    },
+    {
+      "id": "6",
+      "name": "camila",
+      "surname": "camila",
+      "email": "camilacondeisla007@gmail.com",
+      "message": "message",
+      "password": "123456",
+      "type": "learner",
+      "experience": "basic",
+      "timeToDedicate": "15min"
     }
   ]
 }
