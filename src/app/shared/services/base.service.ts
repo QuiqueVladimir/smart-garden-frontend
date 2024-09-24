@@ -7,3 +7,7 @@ export class BaseService {
 
   constructor() { }
 }
+
+/**
+ *
+ */

@@ -1,0 +1,29 @@
+<body>
+<div class="login-wrapper">
+  <h1 class="h1-login">SMARTGARDEN</h1>
+  <div class="container">
+    <form (ngSubmit)="onSubmitLogin($event)">
+      <div>
+        <label class="label-login" for="email">E-mail</label>
+        <input class="inputs-login" type="email" [(ngModel)]="email" name="email" id="email" placeholder="Email" required />
+      </div>
+      <div>
+        <label class="label-login" for="password">Password</label>
+        <input class="inputs-login" type="password" [(ngModel)]="password" name="password" id="password" placeholder="Password" required />
+      </div>
+      <div>
+        <button class="submit-button-login" type="submit">Sign In</button>
+      </div>
+      <div>
+        <button class="submit-button-login" type="button" (click)="onCreateAccount()">Sign Up</button>
+      </div>
+      <div class="forgot-password">
+        <p (click)="onForgotPassword()" role="button" tabindex="0">Forgot password?</p>
+      </div>
+    </form>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
+</body>

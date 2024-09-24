@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John",
+      "surname": "Doe",
+      "email": "johndoe@example.com",
+      "message": "I am interested in joining the platform.",
+      "password": "mypassword123",
+      "type": "expert",
+      "experience": "5 years",
+      "timeToDedicate": "10 hours per week",
+      "targetAgeRange": "40"
+    },
+    {
+      "id": "2",
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "janesmith@example.com",
+      "message": "Looking to learn more about gardening.",
+      "password": "password",
+      "type": "learner",
+      "experience": "Beginner",
+      "timeToDedicate": "5 hours per week",
+      "targetAgeRange": "30"
+    },
+    {
+      "id": "3",
+      "name": "Alice",
+      "surname": "Johnson",
+      "email": "alicejohnson@example.com",
+      "message": "I want to share my knowledge with others.",
+      "password": "1234",
+      "type": "expert",
+      "experience": "10 years",
+      "timeToDedicate": "15 hours per week",
+      "targetAgeRange": "35"
+    },
+    {
+      "id": "4",
+      "name": "Bob",
+      "surname": "Williams",
+      "email": "bobwilliams@example.com",
+      "message": "Eager to learn more about plant care.",
+      "password": "123",
+      "type": "learner",
+      "experience": "Intermediate",
+      "timeToDedicate": "8 hours per week",
+      "targetAgeRange": "25"
+    },
+    {
+      "id": "5",
+      "name": "Charlie",
+      "surname": "Brown",
+      "email": "charliebrown@example.com",
+      "message": "I want to explore new gardening techniques.",
+      "password": "12345",
+      "type": "expert",
+      "experience": "7 years",
+      "timeToDedicate": "12 hours per week",
+      "targetAgeRange": "45"
+    }
+  ]
+}

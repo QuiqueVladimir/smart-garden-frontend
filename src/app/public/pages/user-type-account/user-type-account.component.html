@@ -1,0 +1,37 @@
+<body>
+<div class="user-type-wrapper">
+  <h1 class="h1-login">SMARTGARDEN</h1>
+  <div class="container">
+    <form>
+      <div class="button-group">
+        <!-- Botones con clases dinámicas -->
+        <button type="button" class="learner-button" [ngClass]="{'active': !isExpert}" (click)="selectLearner()">Learner</button>
+        <button type="button" class="expert-button" [ngClass]="{'active': isExpert}" (click)="selectExpert()">Expert</button>
+      </div>
+
+      <!-- Campos comunes para Learner y Expert -->
+      <div>
+        <label class="label-login">Password</label>
+        <input type="password" [(ngModel)]="password" name="password" class="inputs-login" required />
+      </div>
+      <div>
+        <label class="label-login">Experience</label>
+        <input type="text" [(ngModel)]="experience" name="experience" class="inputs-login" required />
+      </div>
+      <div>
+        <label class="label-login">Time to dedicate</label>
+        <input type="text" [(ngModel)]="timeToDedicate" name="timeToDedicate" class="inputs-login" required />
+      </div>
+
+      <!-- Campo extra solo para Expert -->
+      <div *ngIf="isExpert">
+        <label class="label-login">Target Age Range</label>
+        <input type="text" [(ngModel)]="targetAgeRange" name="targetAgeRange" class="inputs-login" />
+      </div>
+
+      <!-- Botón para enviar el formulario -->
+      <button type="button" class="submit-button-login" (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+</div>
+</body>
