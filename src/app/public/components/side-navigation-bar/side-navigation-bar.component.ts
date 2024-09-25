@@ -7,6 +7,7 @@ import {NgClass, NgForOf} from "@angular/common";
 import {MatButton} from "@angular/material/button";
 import {ToolbarComponent} from "../toolbar/toolbar.component";
 import {FooterContentComponent} from "../footer-content/footer-content.component";
+import {UserService} from "../../../shared/services/user.service";
 
 @Component({
   selector: 'app-side-navigation-bar',
@@ -30,6 +31,12 @@ import {FooterContentComponent} from "../footer-content/footer-content.component
   styleUrl: './side-navigation-bar.component.css'
 })
 export class SideNavigationBarComponent {
+  constructor(private userService: UserService) {}
+
+  logout() :void{
+    this.userService.logout();
+  }
+
   menuItems = [
     {label: 'Home', icon: 'home', route: '/home'},
     {label: 'Explore', icon: 'explore', route: '/explore'},

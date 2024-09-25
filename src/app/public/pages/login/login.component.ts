@@ -37,26 +37,24 @@ export class LoginComponent {
    * Muestra un mensaje de error si las credenciales no son correctas o si ocurre un problema.
    */
   onSubmitLogin(event: Event): void {
-    event.preventDefault();  // Prevenir el comportamiento por defecto del formulario
+    event.preventDefault();
 
-    if (this.email && this.password) {  // Verificar que los campos no estén vacíos
+    if (this.email && this.password) {
       this.userService.getUserByEmail(this.email).subscribe({
         next: (user: User | undefined) => {
           if (user && user.password === this.password) {
-            // Si las credenciales son correctas, navegar a la página principal
+            sessionStorage.setItem('user', JSON.stringify(user));
             this.router.navigate(['/home']);
           } else {
-            // Mostrar mensaje de error si las credenciales no coinciden
+
             this.errorMessage = 'El email o la contraseña no son correctos.';
           }
         },
         error: () => {
-          // Mostrar un mensaje de error si ocurre un problema durante la búsqueda del usuario
           this.errorMessage = 'Hubo un error al procesar el inicio de sesión.';
         }
       });
     } else {
-      // Mostrar un mensaje de error si no se han completado todos los campos
       this.errorMessage = 'Por favor, complete todos los campos.';
     }
   }
