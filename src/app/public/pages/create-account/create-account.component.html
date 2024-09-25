@@ -1,0 +1,28 @@
+<body>
+<div class="create-account-wrapper">
+  <h1 class="h1-login">SMARTGARDEN</h1>
+  <div class="container">
+    <form (ngSubmit)="onUserType()">
+      <div>
+        <label class="label-login" for="name">Name</label>
+        <input class="inputs-login" type="text" id="name" [(ngModel)]="name" name="name" placeholder="Enter your name" required />
+      </div>
+      <div>
+        <label class="label-login" for="surname">Surname</label>
+        <input class="inputs-login" type="text" id="surname" [(ngModel)]="surname" name="surname" placeholder="Enter your surname" required />
+      </div>
+      <div>
+        <label class="label-login" for="email">Email</label>
+        <input class="inputs-login" type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required />
+      </div>
+      <div>
+        <label class="label-login" for="message">Message</label>
+        <input class="inputs-login" type="text" id="message" [(ngModel)]="message" name="message" placeholder="Enter a message" required />
+      </div>
+      <div>
+        <button class="submit-button-login" type="submit">Next</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>

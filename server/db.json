@@ -1,0 +1,318 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "type": "Expert",
+      "name": "John Doe",
+      "subscription": "premium"
+    },
+    {
+      "id": 2,
+      "type": "Beginner",
+      "name": "Jane Smith",
+      "subscription": "Beginner"
+    },
+    {
+      "id": 3,
+      "type": "Beginner",
+      "name": "Alice Johnson",
+      "subscription": "premium"
+    },
+    {
+      "id": 4,
+      "type": "Beginner",
+      "name": "Bob Williams",
+      "subscription": "Beginner"
+    },
+    {
+      "id": 5,
+      "type": "Expert",
+      "name": "Charlie Brown",
+      "subscription": "premium"
+    },
+    {
+      "id": 6,
+      "type": "Beginner",
+      "name": "camila Conde",
+      "subscription": "Beginner"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "profileId": 1,
+      "name": "John",
+      "surname": "Doe",
+      "email": "johndoe@example.com",
+      "message": "I am interested in joining the platform.",
+      "password": "mypassword123",
+      "type": "expert",
+      "experience": "5 years",
+      "timeToDedicate": "10 hours per week",
+      "targetAgeRange": "40"
+    },
+    {
+      "id": 1,
+      "profileId": 2,
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "janesmith@example.com",
+      "message": "Looking to learn more about gardening.",
+      "password": "password",
+      "type": "learner",
+      "experience": "Beginner",
+      "timeToDedicate": "5 hours per week",
+      "targetAgeRange": "30"
+    },
+    {
+      "id": 3,
+      "profileId": 3,
+      "name": "Alice",
+      "surname": "Johnson",
+      "email": "alicejohnson@example.com",
+      "message": "I want to share my knowledge with others.",
+      "password": "1234",
+      "type": "expert",
+      "experience": "10 years",
+      "timeToDedicate": "15 hours per week",
+      "targetAgeRange": "35"
+    },
+    {
+      "id": 4,
+      "profileId": 4,
+      "name": "Bob",
+      "surname": "Williams",
+      "email": "bobwilliams@example.com",
+      "message": "Eager to learn more about plant care.",
+      "password": "123",
+      "type": "learner",
+      "experience": "Intermediate",
+      "timeToDedicate": "8 hours per week",
+      "targetAgeRange": "25"
+    },
+    {
+      "id": 5,
+      "profileId": 5,
+      "name": "Charlie",
+      "surname": "Brown",
+      "email": "charliebrown@example.com",
+      "message": "I want to explore new gardening techniques.",
+      "password": "12345",
+      "type": "expert",
+      "experience": "7 years",
+      "timeToDedicate": "12 hours per week",
+      "targetAgeRange": "45"
+    },
+    {
+      "id": 6,
+      "profileId": 6,
+      "name": "camila",
+      "surname": "Conde",
+      "email": "camilacondeisla007@gmail.com",
+      "message": "message",
+      "password": "123456",
+      "type": "learner",
+      "experience": "basic",
+      "timeToDedicate": "15min"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 2,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 3,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 4,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 5,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    }
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "title": "Module 1: Getting Started with Hydroponics",
+      "description": "Learn the basics of hydroponics",
+      "video": "https://www.youtube.com/embed/rnJlmDV2GBE?si=iUh89TDXHq_wwKXA",
+      "transcription": "SDSPDLSDPSLD",
+      "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
+      "links": ["https://www.google.com", "https://www.youtube.com"]
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "title": "Module 2: Hydroponic Systems",
+      "description": "Learn the basics of hydroponics",
+      "video": "https://www.youtube.com/watch?v=2",
+      "transcription": "module.txt",
+      "images": ["image1.jpg", "image2.jpg"],
+      "links": ["https://www.google.com", "https://www.youtube.com"]
+    },
+    {
+    "id": 3,
+    "courseId": 2,
+    "title": "Module 1: Getting Started with Hydroponics",
+    "description": "Learn the basics of hydroponics",
+    "video": "https://www.youtube.com/watch?v=1",
+    "transcription": "LWLDWMDWD",
+    "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
+    "links": ["https://www.google.com", "https://www.youtube.com"]
+    },
+    {
+      "id": 4,
+      "courseId": 2,
+      "title": "Module 2: Hydroponic Systems",
+      "description": "Learn the basics of hydroponics",
+      "video": "https://www.youtube.com/watch?v=2",
+      "transcription": "module.txt",
+      "images": ["image1.jpg", "image2.jpg"],
+      "links": ["https://www.google.com", "https://www.youtube.com"]
+    }
+  ],
+  "progress": [
+    {
+      "userId": 2,
+      "courseId": 1,
+      "moduleId": 1,
+      "status": "Completed"
+    },
+    {
+      "userId": 2,
+      "courseId": 1,
+      "moduleId": 2,
+      "status": "In Progress"
+    },
+    {
+      "userId": 3,
+      "courseId": 1,
+      "moduleId": 1,
+      "status": "In Progress"
+    },
+    {
+      "userId": 4,
+      "courseId": 1,
+      "moduleId": 2,
+      "status": "In Progress"
+    }
+  ],
+  "purchased_courses": [
+    {
+      "id": 1,
+      "userId": 2,
+      "courseId": 1,
+      "date": "2021-01-01 12:00:00"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "courseId": 1,
+      "date": "2021-01-01 12:00:00"
+    }
+  ],
+  "communities": [
+    {
+      "id": 1,
+      "expertId": 1,
+      "courseId": 1,
+      "title": "Hydroponics Community",
+      "description": "A community for hydroponics enthusiasts",
+      "image": "image.jpg",
+      "membersId": [2, 3, 4],
+      "fixedMessageId": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "image": ["image1.jpg", "image2.jpg"],
+      "date": "2021-01-01 12:00:00",
+      "likes": 5,
+      "parentCommentId": 2
+    }
+  ],
+  "stores": [
+    {
+      "id": 1,
+      "expertId": 1,
+      "products": [1]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Hydroponic Starter Kit",
+      "description": "A starter kit for hydroponics",
+      "front": "image.jpg",
+      "price": 50,
+      "image": ["image1.jpg", "image2.jpg"],
+      "document": ["doc1.pdf", "doc2.pdf"],
+      "text": ["text1", "text2"]
+    }
+  ],
+  "purchased_products": [
+    {
+      "id": 1,
+      "userId": 2,
+      "productId": 1,
+      "date": "2021-01-01 12:00:00"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "userId": 2,
+      "type": "premium",
+      "date": "2021-01-01 12:00:00"
+    }
+  ]
+}
+

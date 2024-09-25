@@ -1,0 +1,20 @@
+<div class="course-detail-container">
+  <div class="course-info">
+    <h2>{{ course.title }}</h2>
+    <img [src]="course.image" alt="{{ course.title }}" class="course-image">
+    <p>{{ course.description }}</p>
+    <p><strong>Number of Modules:</strong> {{ course.numberModules }}</p>
+    <p><strong>Rating:</strong> {{ course.rating }}</p>
+    <p><strong>Price:</strong> ${{ course.price }}</p>
+  </div>
+  <div class="module-list">
+    <h3>Modules</h3>
+    <ul>
+      <li *ngFor="let module of modules">
+        <a [routerLink]="['/courses', courseId, 'modules', module.id]">
+          {{ module.title }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

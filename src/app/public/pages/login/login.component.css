@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e4e4ca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h1-login {
+  color: black;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  font-family: Inter, sans-serif
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.label-login {
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: black;
+}
+
+
+.inputs-login {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.submit-button-login {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button-login:hover {
+  background-color: #333;
+}
+
+.forgot-password {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0 0;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .h1-login {
+    font-size: 1.5rem;
+  }
+
+  .inputs-login, .submit-button-login {
+    padding: 0.8rem;
+  }
+}
