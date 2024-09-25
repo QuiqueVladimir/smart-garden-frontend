@@ -15,5 +15,18 @@ export const routes: Routes = [
   {
     path: "courses/:courseId/modules/:moduleId",
     component: ModuleDetailComponent
+  },
+  {
+    path: "home",
+    component: CourseListComponent
+  },
+  {
+    path: "explore",
+    component: CourseListComponent
+  },
+  {
+    path: "collection",
+    component: CourseListComponent
   }
+
 ];

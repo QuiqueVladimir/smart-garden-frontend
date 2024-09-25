@@ -1,7 +1,7 @@
 .course-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  min-height: 94vh;
 }
 
 .course-card-container {
@@ -9,6 +9,14 @@
   margin: 10px;
   box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto */
 }
+
+mat-paginator{
+  width: 100%;
+  margin-top:auto;
+  background-color: #666666;
+}
+
+
 
 @media (max-width: 854px) {
   .course-container {
