@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-found.component";
-import {AboutComponent} from "./public/pages/about/about.component";
 import {HomeComponent} from "./public/pages/home/home.component";
 import {LoginComponent} from "./public/pages/login/login.component";
 import {CreateAccountComponent} from "./public/pages/create-account/create-account.component";
@@ -12,16 +11,14 @@ import {CourseListComponent} from "./smartGarden/components/course-list/course-l
 import {CourseDetailComponent} from "./smartGarden/components/course-detail/course-detail.component";
 import {ModuleDetailComponent} from "./smartGarden/components/module-detail/module-detail.component";
 
+
 export const routes: Routes = [
   { path: 'home',             component: HomeComponent },
-  { path: 'about',            component: AboutComponent },
   { path: 'login',            component: LoginComponent},
   { path: 'create',           component: CreateAccountComponent},
   { path: 'restore',          component: RestorePasswordComponent},
   { path: 'new-password',     component: NewPasswordComponent},
   { path: 'user-type',        component: UserTypeAccountComponent},
-  { path: '',                 redirectTo: 'login', pathMatch: 'full' },
-  { path: '**',               component: PageNotFoundComponent },
   {
     path: "list",
     component: CourseListComponent
@@ -35,16 +32,15 @@ export const routes: Routes = [
     component: ModuleDetailComponent
   },
   {
-    path: "home",
-    component: CourseListComponent
-  },
-  {
     path: "explore",
     component: CourseListComponent
   },
   {
     path: "collection",
     component: CourseListComponent
-  }
+  },
+  { path: '',                 redirectTo: 'login', pathMatch: 'full' },
+  { path: '**',               component: PageNotFoundComponent },
 
 ];
+

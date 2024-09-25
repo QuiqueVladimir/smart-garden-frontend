@@ -8,11 +8,9 @@ import {catchError, Observable, retry} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class CourseService extends BaseService<Course>{
+export class CourseService extends BaseService<Course> {
   constructor() {
-    super();
-    this.resourceEndPoint = '/courses';
-    this.resourceEndPoint2 = '/modules';
+    super('/courses');
   }
 
   public getModulesByCurseId(courseId: number): Observable<Module[]>{
@@ -21,7 +19,7 @@ export class CourseService extends BaseService<Course>{
   }
 
   public getModuleById(moduleId: number): Observable<Module> {
-    return this.http.get<Module>(`${this.resourcePath2()}/${moduleId}/`, this.httpOptions)
+    return this.http.get<Module>(`${this.basePath}/modules/${moduleId}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
