@@ -13,6 +13,10 @@ protected basePath: string = `http://localhost:3000`;
 protected resourceEndPoint: string = '/resources';
 protected resourceEndPoint2: string = '/resources2';
 
+  constructor(resourceEndPoint: string) {
+    this.resourceEndPoint = resourceEndPoint;
+  }
+
 protected handleError(error: HttpErrorResponse){
   if(error.error instanceof ErrorEvent){
     console.error(`An error occurred: ${error.message}`);

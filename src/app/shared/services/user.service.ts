@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { map, mergeMap, Observable } from "rxjs";
+import {BaseService} from "./base.service";
+import {Router} from "@angular/router";
 
 export interface User {
   id?: string;
@@ -18,17 +20,17 @@ export interface User {
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-  private apiUrl = 'http://localhost:3000/users';  // URL de la API (json-server)
-
-  constructor(private http: HttpClient) {}
-
+export class UserService extends BaseService<User> {
+  constructor(http: HttpClient, private router: Router) {
+    super('/users');
+    this.http = http;
+  }
   /**
    * Get all users from the server
    * @returns {Observable<User[]>} - An observable that emits the list of users
    */
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiUrl);
+    return this.http.get<User[]>(this.resourcePath());
   }
 
   /**
@@ -37,7 +39,7 @@ export class UserService {
    * @returns {Observable<User>} - An observable that emits the newly created user
    */
   registerUser(user: User): Observable<User> {
-    return this.http.post<User>(this.apiUrl, user);
+    return this.http.post<User>(this.resourcePath(), user);
   }
 
   /**
@@ -46,8 +48,8 @@ export class UserService {
    * @returns {Observable<User | undefined>} - An observable that emits the found user or undefined
    */
   getUserByEmail(email: string): Observable<User | undefined> {
-    return this.http.get<User[]>(`${this.apiUrl}?email=${email}`).pipe(
-      map(users => users[0])  // Return the first user that matches the email
+    return this.http.get<User[]>(`${this.resourcePath()}?email=${email}`).pipe(
+      map(users => users[0])
     );
   }
 
@@ -61,14 +63,22 @@ export class UserService {
     return this.getUserByEmail(email).pipe(
       mergeMap(user => {
         if (user && user.id) {
-          const userId = user.id;  // Keep the ID as string
-          const updatedUser = { ...user, password: newPassword };  // Update only the password
-          console.log(`Updating user with id: ${userId} at URL: ${this.apiUrl}/${userId}`);
-          return this.http.put<User>(`${this.apiUrl}/${userId}`, updatedUser);  // Make the PUT request with the updated data
+          const userId = user.id;
+          const updatedUser = { ...user, password: newPassword };
+          return this.update(userId, updatedUser);
         } else {
           throw new Error('User not found');
         }
       })
     );
+  }
+  isLoggedIn(): boolean {
+    return sessionStorage.getItem('user') !== null;
+  }
+  logout(): void{
+    sessionStorage.removeItem('user');
+    this.router.navigate(['/login']).then(()=>{
+      window.location.reload();
+    });
   }
 }
