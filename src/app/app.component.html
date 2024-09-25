@@ -1,3 +1,7 @@
-<app-side-navigation-bar>
-</app-side-navigation-bar>
+<ng-container *ngIf="isLoggedIn()">
+  <app-side-navigation-bar>
+  </app-side-navigation-bar>
+</ng-container>
+<router-outlet></router-outlet>
+
 
