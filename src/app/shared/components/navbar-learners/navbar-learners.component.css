@@ -1,0 +1,100 @@
+/* Estilos generales del toolbar */
+mat-toolbar {
+  justify-content: space-between;
+  background-color: #437648;
+  padding: 0 90px;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 135px;
+  padding-right: 40px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Media Queries para hacer responsive */
+@media (max-width: 992px) {
+  mat-toolbar {
+    padding: 0 30px;
+  }
+
+  img {
+    max-width: 100px;
+    padding-right: 20px;
+  }
+
+  .action-button {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-icons {
+    display: none;
+  }
+
+  .responsive-navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #437648;
+    width: 100%;
+    position: absolute;
+    top: 56px; /* Altura del toolbar */
+    left: 0;
+    z-index: 999;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .responsive-navbar.open {
+    max-height: 500px; /* Ajustar según el número de enlaces */
+  }
+
+  .responsive-navbar a {
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+  }
+}

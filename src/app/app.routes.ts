@@ -7,6 +7,10 @@ import {CreateAccountComponent} from "./public/pages/create-account/create-accou
 import {RestorePasswordComponent} from "./public/pages/restore-password/restore-password.component";
 import {NewPasswordComponent} from "./public/pages/new-password/new-password.component";
 import {UserTypeAccountComponent} from "./public/pages/user-type-account/user-type-account.component";
+/**/
+import {CourseListComponent} from "./smartGarden/components/course-list/course-list.component";
+import {CourseDetailComponent} from "./smartGarden/components/course-detail/course-detail.component";
+import {ModuleDetailComponent} from "./smartGarden/components/module-detail/module-detail.component";
 
 export const routes: Routes = [
   { path: 'home',             component: HomeComponent },
@@ -17,5 +21,30 @@ export const routes: Routes = [
   { path: 'new-password',     component: NewPasswordComponent},
   { path: 'user-type',        component: UserTypeAccountComponent},
   { path: '',                 redirectTo: 'login', pathMatch: 'full' },
-  { path: '**',               component: PageNotFoundComponent }
+  { path: '**',               component: PageNotFoundComponent },
+  {
+    path: "list",
+    component: CourseListComponent
+  },
+  {
+    path: "course/:courseId",
+    component: CourseDetailComponent
+  },
+  {
+    path: "courses/:courseId/modules/:moduleId",
+    component: ModuleDetailComponent
+  },
+  {
+    path: "home",
+    component: CourseListComponent
+  },
+  {
+    path: "explore",
+    component: CourseListComponent
+  },
+  {
+    path: "collection",
+    component: CourseListComponent
+  }
+
 ];

@@ -1,0 +1,31 @@
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 94vh;
+}
+
+.course-card-container {
+  flex: 1 0 400px; /* Ajusta el ancho de las tarjetas */
+  margin: 10px;
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto */
+}
+
+mat-paginator{
+  width: 100%;
+  margin-top:auto;
+  background-color: #666666;
+}
+
+
+
+@media (max-width: 854px) {
+  .course-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .course-card-container {
+    flex: 1 0 100%; /* Las tarjetas ocuparán el 100% del ancho del contenedor */
+    max-width: 400px; /* Limita el ancho máximo de las tarjetas */
+  }
+}

@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {LoginComponent} from "./public/pages/login/login.component";
+import {SideNavigationBarComponent} from "./public/components/side-navigation-bar/side-navigation-bar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent],
+  imports: [RouterOutlet, LoginComponent,SideNavigationBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'smart-garden-spa';
+  constructor() {
+
+  }
 }

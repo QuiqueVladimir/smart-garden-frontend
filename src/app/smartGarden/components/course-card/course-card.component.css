@@ -1,0 +1,58 @@
+.course-card {
+  max-width: 400px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-image {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+
+.mat-card-title {
+  font-weight: bold;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-container {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+
+.rating {
+  color: #ffffff;
+}
+
+.price {
+  font-weight: bold;
+  color: #496c57;
+}
+
+.description {
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+.course-card {
+  background-color: #f5f5f5;
+}
+
+.module-count {
+  font-size: 0.8em;
+  color: #888;
+  margin-left: 5px;
+}

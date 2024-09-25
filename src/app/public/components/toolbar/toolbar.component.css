@@ -1,0 +1,14 @@
+.spacer {
+  flex-grow: 1;
+}
+
+.mat-toolbar {
+  background-color: #1b5e20; /* Mismo color que el sidenav */
+  color: white; /* Color del texto */
+}
+
+.profile-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
