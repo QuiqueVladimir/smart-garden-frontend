@@ -3,12 +3,22 @@
 }
 
 .mat-toolbar {
-  background-color: #1b5e20; /* Mismo color que el sidenav */
-  color: white; /* Color del texto */
+  background-color: #1b5e20;
+  color: white;
 }
 
 .profile-image {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+}
+
+.circular-icon{
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
