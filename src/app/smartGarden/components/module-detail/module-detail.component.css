@@ -1,40 +1,46 @@
-/* General Styles */
-
 mat-card {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 900px;
   margin: 20px auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: aliceblue;
-  min-height: 800px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #fff;
 }
 
-.mat-card-title {
-  font-size: 20px;
-  font-weight: 500;
+mat-card-title {
+  font-size: 1.6em;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: #333;
 }
 
-.mat-card-subtitle {
-  color: #888;
+mat-card-subtitle {
+  font-size: 1.2em;
+  color: #666;
   margin-bottom: 20px;
 }
-
-/* Video Container */
 
 .video-container {
+  flex: 1;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  width: 100%;
 }
 
-.video-container p {
-  flex: 1;
-  margin: 0;
-  font-style: italic;
-  color: #666;
+iframe {
+  width: 100%;  /* Ajusta el ancho al contenedor */
+  height: 400px; /* Aumenta la altura del video */
+  border: none;
+  border-radius: 8px;
 }
 
-/* Navigation Buttons */
+mat-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
 .navigation-buttons {
   display: flex;
@@ -43,56 +49,67 @@ mat-card {
 }
 
 .navigation-buttons button {
-  margin: 5px;
+  flex: 1;
+  margin: 0 5px;
 }
-
-/* Transcription Box */
 
 .transcription-box {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
-/* Image Gallery */
+.transcription-box p {
+  margin: 0;
+  line-height: 1.6;
+}
 
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .image-item {
-  margin: 5px;
-  width: calc(33% - 10px); /* Adjust based on desired image ratio */
+  flex: 1 1 150px;
+  max-width: 150px;
 }
 
 .course-image {
   width: 100%;
   height: auto;
-}
-
-/* Links Section */
-
-.links-section {
-  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .links-section ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 .links-section li {
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 .links-section a {
-  color: #333;
+  color: #1976d2;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .links-section a:hover {
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  mat-card-content {
+    flex-direction: column;
+  }
+
+  iframe {
+    height: 250px;
+  }
 }

@@ -1,9 +1,40 @@
 .course-card {
-  max-width: 400px;
+  width: 400px;
+  height: 315px;
   margin: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  flex: 1 1 calc(25% - 40px);
 }
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mat-headline-small {
+  font-size: 0.9em;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 1.5em;
+  margin-left: 15px;
+}
+.mat-headline-small-description {
+  font-size: 0.9em;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 1.7em;
+}
+
 
 .course-image {
   width: auto;

@@ -1,46 +1,7 @@
 {
-  "profiles": [
-    {
-      "id": 1,
-      "type": "Expert",
-      "name": "John Doe",
-      "subscription": "premium"
-    },
-    {
-      "id": 2,
-      "type": "Beginner",
-      "name": "Jane Smith",
-      "subscription": "Beginner"
-    },
-    {
-      "id": 3,
-      "type": "Beginner",
-      "name": "Alice Johnson",
-      "subscription": "premium"
-    },
-    {
-      "id": 4,
-      "type": "Beginner",
-      "name": "Bob Williams",
-      "subscription": "Beginner"
-    },
-    {
-      "id": 5,
-      "type": "Expert",
-      "name": "Charlie Brown",
-      "subscription": "premium"
-    },
-    {
-      "id": 6,
-      "type": "Beginner",
-      "name": "camila Conde",
-      "subscription": "Beginner"
-    }
-  ],
   "users": [
     {
       "id": 1,
-      "profileId": 1,
       "name": "John",
       "surname": "Doe",
       "email": "johndoe@example.com",
@@ -52,8 +13,7 @@
       "targetAgeRange": "40"
     },
     {
-      "id": 1,
-      "profileId": 2,
+      "id": 2,
       "name": "Jane",
       "surname": "Smith",
       "email": "janesmith@example.com",
@@ -66,7 +26,6 @@
     },
     {
       "id": 3,
-      "profileId": 3,
       "name": "Alice",
       "surname": "Johnson",
       "email": "alicejohnson@example.com",
@@ -79,7 +38,6 @@
     },
     {
       "id": 4,
-      "profileId": 4,
       "name": "Bob",
       "surname": "Williams",
       "email": "bobwilliams@example.com",
@@ -92,7 +50,6 @@
     },
     {
       "id": 5,
-      "profileId": 5,
       "name": "Charlie",
       "surname": "Brown",
       "email": "charliebrown@example.com",
@@ -105,7 +62,6 @@
     },
     {
       "id": 6,
-      "profileId": 6,
       "name": "camila",
       "surname": "Conde",
       "email": "camilacondeisla007@gmail.com",
@@ -113,14 +69,15 @@
       "password": "123456",
       "type": "learner",
       "experience": "basic",
-      "timeToDedicate": "15min"
+      "timeToDedicate": "15min",
+      "targetAgeRange": "20"
     }
   ],
   "courses": [
     {
       "id": 1,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
+      "title": "Introduction to Hydropinics aaaaaaaaaasdkmasd asdkawd k awdk wd ",
+      "description": "Learn the basicwdwwwwwwwwwwwwwws of hydroponics",
       "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
       "expertId": 1,
       "communityId": 1,
@@ -163,6 +120,39 @@
     },
     {
       "id": 5,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 6,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 7,
+      "title": "Introduction to Hydropinics",
+      "description": "Learn the basics of hydroponics",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "expertId": 1,
+      "communityId": 1,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 2
+    },
+    {
+      "id": 8,
       "title": "Introduction to Hydropinics",
       "description": "Learn the basics of hydroponics",
       "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
@@ -250,7 +240,7 @@
     },
     {
       "id": 2,
-      "userId": 3,
+      "userId": 4,
       "courseId": 1,
       "date": "2021-01-01 12:00:00"
     }
@@ -309,9 +299,79 @@
   "subscriptions": [
     {
       "id": 1,
+      "name": "Basic",
+      "type_user": "Expert",
+      "price": 9.99,
+      "description": "Create courses and share your knowledge with the world",
+      "duration": 30
+    },
+    {
+      "id": 2,
+      "name": "Community expansion",
+      "type_user": "Expert",
+      "price": 14.99,
+      "description": "Create courses and communities to share progress",
+      "duration": 30
+    },
+    {
+      "id": 3,
+      "name": "Pro Plan Expert",
+      "type_user": "Expert",
+      "price": 24.99,
+      "description": "Create a custom store where you can sell additional content and you will also have all the benefits of community expansion",
+      "duration": 90
+    },
+    {
+      "id": 4,
+      "name": "Learning Plan",
+      "type_user": "Learner",
+      "price": 0,
+      "description": "Discover hydroponics at your own pace, you can access digital courses, communities and personalized stores",
+      "duration": "unlimited"
+    }
+  ],
+  "subscriptions_users": [
+    {
+      "id": 1,
+      "userId": 1,
+      "subscription_id": 1,
+      "date_init": "2021-01-01 12:00:00",
+      "date_end": "2021-01-31 12:00:00"
+    },
+    {
+      "id": 2,
       "userId": 2,
-      "type": "premium",
-      "date": "2021-01-01 12:00:00"
+      "subscription_id": 4,
+      "date_init": "2021-01-01 12:00:00",
+      "date_end": "2021-01-31 12:00:00"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "subscription_id": 2,
+      "date_init": "2021-01-01 12:00:00",
+      "date_end": "2021-04-01 12:00:00"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "subscription_id": 4,
+      "date_init": "2021-01-01 12:00:00",
+      "date_end": "2021-01-31 12:00:00"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "subscription_id": 3,
+      "date_init": "2021-01-01 12:00:00",
+      "date_end": "2021-01-31 12:00:00"
+    },
+    {
+      "id": 6,
+      "userId": 6,
+      "subscription_id": 4,
+      "date_init": "2021-01-01 12:00:00",
+      "date_end": "2021-01-31 12:00:00"
     }
   ]
 }

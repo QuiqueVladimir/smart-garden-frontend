@@ -1,0 +1,14 @@
+<div class="subscription-cards-container">
+<mat-card *ngFor="let subscription of subscriptions" class="subscription-card">
+  <mat-card-header>
+    <mat-card-title>{{ subscription.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ subscription.description }}</p>
+    <p>Price: {{ subscription.price | currency }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">BUY</button>
+  </mat-card-actions>
+</mat-card>
+</div>

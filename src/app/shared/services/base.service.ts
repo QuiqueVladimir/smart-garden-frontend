@@ -1,4 +1,3 @@
-import {environment} from "../../../environments/environment";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
 import {inject} from "@angular/core";
@@ -8,10 +7,9 @@ protected httpOptions={ headers: new HttpHeaders({'Content-Type':'application/js
 
 protected http:HttpClient = inject(HttpClient);
 
-protected basePath: string = `http://localhost:3000`;
+protected basePath: string = `https://fake-api-smartgarden.vercel.app`;
 
 protected resourceEndPoint: string = '/resources';
-protected resourceEndPoint2: string = '/resources2';
 
   constructor(resourceEndPoint: string) {
     this.resourceEndPoint = resourceEndPoint;
@@ -30,9 +28,6 @@ protected resourcePath(): string{
   return `${this.basePath}${this.resourceEndPoint}`;
 }
 
-protected resourcePath2(): string{
-  return `${this.basePath}${this.resourceEndPoint2}`;
-}
 
 public create(item: any): Observable<T>{
   return this.http.post<T>(this.resourcePath(), JSON.stringify(item), this.httpOptions).pipe(retry(2),catchError(this.handleError));
