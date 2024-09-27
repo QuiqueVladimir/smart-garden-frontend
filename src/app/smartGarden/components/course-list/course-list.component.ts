@@ -20,7 +20,7 @@ export class CourseListComponent implements OnInit {
   courses: Course[] = [];
   listCourses: Course[] = [];
   totalCourses: number = 0;
-  coursesPerPage: number = 5;
+  coursesPerPage: number = 6;
   currentPage: number = 0;
 constructor(private courseService: CourseService) { }
 
