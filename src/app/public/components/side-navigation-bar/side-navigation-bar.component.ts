@@ -1,31 +1,32 @@
 import { Component } from '@angular/core';
-import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
+import {MatSidenavModule} from "@angular/material/sidenav";
 import {RouterLink, RouterOutlet} from "@angular/router";
-import {MatList, MatListItem} from "@angular/material/list";
-import {MatIcon} from "@angular/material/icon";
+import {MatListModule} from "@angular/material/list";
+import {MatIconModule} from "@angular/material/icon";
 import {NgClass, NgForOf} from "@angular/common";
-import {MatButton} from "@angular/material/button";
+import {MatButtonModule} from "@angular/material/button";
 import {ToolbarComponent} from "../toolbar/toolbar.component";
 import {FooterContentComponent} from "../footer-content/footer-content.component";
 import {UserService} from "../../../shared/services/user.service";
+import {MatLabel} from "@angular/material/form-field";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-side-navigation-bar',
   standalone: true,
   imports: [
-    MatSidenav,
-    MatSidenavContainer,
-    MatSidenavContent,
+    MatSidenavModule,
     RouterOutlet,
-    MatList,
-    MatListItem,
+    MatListModule,
     RouterLink,
-    MatIcon,
+    MatIconModule,
     NgForOf,
     NgClass,
-    MatButton,
+    MatButtonModule,
     ToolbarComponent,
-    FooterContentComponent
+    FooterContentComponent,
+    MatLabel,
+    FooterComponent
   ],
   templateUrl: './side-navigation-bar.component.html',
   styleUrl: './side-navigation-bar.component.css'

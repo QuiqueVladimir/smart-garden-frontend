@@ -1,18 +1,24 @@
-<app-toolbar/>
+<app-toolbar class="toolbar"/>
 <mat-sidenav-container class="principal-sidenav">
   <mat-sidenav mode="side" opened>
     <mat-list>
       <mat-list-item class="my-list-item" *ngFor="let item of menuItems" [routerLink]="item.route" [ngClass]="{'logout-item': item.label === 'Logout'}">
-        <mat-icon>{{item.icon}}</mat-icon>
-        {{item.label}}
+        <div class="menu-item-content">
+          <mat-icon>{{item.icon}}</mat-icon>
+          <span>{{item.label}}</span>
+        </div>
       </mat-list-item>
     </mat-list>
-    <button mat-button class="logout-buttom" (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      Logout
-    </button>
+    <div class="logout-container">
+      <button mat-button class="logout-button" (click)="logout()">
+        <mat-icon class="logout-icon">logout</mat-icon>
+        <span class="logout-text">Logout</span>
+      </button>
+    </div>
+    <app-footer/>
   </mat-sidenav>
-  <mat-sidenav-content><router-outlet/></mat-sidenav-content>
+  <mat-sidenav-content>
+    <router-outlet/>
+  </mat-sidenav-content>
 </mat-sidenav-container>
-<app-footer-content/>
 

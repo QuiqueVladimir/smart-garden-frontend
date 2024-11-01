@@ -5,7 +5,7 @@
 }
 
 .mat-sidenav {
-  background-color: #1b5e20;
+  background-color: #d1e3d3;
   max-width: 220px;
   border-radius: 0;
   display: flex;
@@ -25,24 +25,42 @@
   margin-bottom: 15px;
 }
 
+.menu-item-content {
+  display: flex;
+  align-items: center;
+}
+
+.my-list-item mat-icon {
+  margin-right: 10px;
+}
+
 .my-list-item:hover {
-  background-color: #283593;
+  background-color: rgba(211, 214, 227, 0.42);
   color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .logout-button{
-  background-color: #333;
-  color: #fff;
-  margin-top: auto;
-  align-self: center;
-  width: calc(100% - 40px);
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: #60788c;
+  transition: background-color 0.3s ease;
+  width: 90%;
 }
 
-.logout-item {
-  margin-top: auto;
+.logout-icon {
+  color: #e5e0e0;
 }
 
+.logout-text {
+  color: #e5e0e0;
+}
+
+.logout-button:hover {
+  background-color: #8299ad;
+}
 
 @media (max-width: 768px) {
   .mat-sidenav {
