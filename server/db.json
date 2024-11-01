@@ -330,48 +330,54 @@
       "duration": "unlimited"
     }
   ],
-  "subscriptions_users": [
+  "subscriptions-users": [
     {
       "id": 1,
       "userId": 1,
       "subscription_id": 1,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "status": "active",
+      "date_init": "2012-01-31 23:59:59",
+      "date_end": "2026-01-31 23:59:59"
     },
     {
       "id": 2,
       "userId": 2,
       "subscription_id": 4,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 3,
       "userId": 3,
       "subscription_id": 2,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-04-01 12:00:00"
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 4,
       "userId": 4,
       "subscription_id": 4,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 5,
       "userId": 5,
       "subscription_id": 3,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 6,
       "userId": 6,
       "subscription_id": 4,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     }
   ]
 }
