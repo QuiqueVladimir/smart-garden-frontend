@@ -81,4 +81,11 @@ export class UserService extends BaseService<User> {
       window.location.reload();
     });
   }
+
+  // Obtener un usuario por ID
+  getUserById(id: number): Observable<User | undefined> {
+    return this.http.get<User[]>(`${this.resourcePath()}?id=${id}`).pipe(
+      map(users => users[0]) // Tomar el primer usuario que coincida con el ID
+    );
+  }
 }

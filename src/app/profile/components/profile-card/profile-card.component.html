@@ -1,0 +1,39 @@
+<div class="profile-container" *ngIf="user">
+  <div class="profile-header">
+    <h2>{{ user.name }} {{ user.surname }}</h2>
+    <p>{{ user.email }}</p>
+  </div>
+
+  <div class="profile-details">
+    <h3>Información básica</h3>
+    <div class="detail-item">
+      <label>Nombre completo:</label>
+      <span>{{ user.name }} {{ user.surname }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Correo electrónico:</label>
+      <span>{{ user.email }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Tipo de usuario:</label>
+      <span>{{ user.type | titlecase }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Experiencia:</label>
+      <span>{{ user.experience }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Tiempo para dedicar:</label>
+      <span>{{ user.timeToDedicate }}</span>
+    </div>
+    <div class="detail-item">
+      <label>Rango de edad objetivo:</label>
+      <span>{{ user.targetAgeRange }}</span>
+    </div>
+  </div>
+
+  <div class="profile-message">
+    <h3>Mensaje del usuario</h3>
+    <p>{{ user.message }}</p>
+  </div>
+</div>

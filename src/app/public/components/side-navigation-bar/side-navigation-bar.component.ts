@@ -38,14 +38,14 @@ export class SideNavigationBarComponent {
   }
 
   menuItems = [
-    {label: 'Home', icon: 'home', route: '/home'},
-    {label: 'Explore', icon: 'explore', route: '/explore'},
-    {label: 'My Collection', icon: 'collections', route: '/collection'},
-    {label: 'Notifications', icon: 'notifications', route: '/notifications'},
-    {label: 'Communities', icon: 'group', route: '/communities'},
-    {label: 'My store', icon: 'store', route: '/store'},
-    {label: 'Profile', icon: 'account_circle', route: '/profile'},
-    {label: 'Subscriptions', icon: 'subscriptions', route: '/subscriptions'},
-    {label: 'Settings', icon: 'settings', route: '/settings'}
+    { label: 'Home', icon: 'home', route: '/home' },
+    { label: 'Explore', icon: 'explore', route: '/explore' },
+    { label: 'My Collection', icon: 'collections', route: '/collection' },
+    { label: 'Notifications', icon: 'notifications', route: '/notifications' },
+    { label: 'Communities', icon: 'group', route: '/communities' },
+    { label: 'My store', icon: 'store', route: '/store' },
+    { label: 'Profile', icon: 'account_circle', route: '/profile' },
+    { label: 'Subscriptions', icon: 'subscriptions', route: '/subscriptions' },
+    { label: 'Settings', icon: 'settings', route: '/settings' }
   ]
 }
