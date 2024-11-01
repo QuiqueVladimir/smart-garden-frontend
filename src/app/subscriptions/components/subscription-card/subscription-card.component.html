@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ subscription.title }}</mat-card-title>
+    <mat-card-subtitle> Dirigido a : {{ subscription.target }} </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="duration">Duración: {{ subscription.duration }}</p>
+    <p class="cost">Costo: ${{ subscription.cost }}</p>
+    <p class="description">{{ subscription.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button class="buy-button" *ngIf="!hasSubscription || currentSubscriptionId !== subscription.id" (click)="buySubscription()">
+      Migrate
+    </button>
+    <button mat-button class="buy-button" *ngIf="hasSubscription && currentSubscriptionId === subscription.id" (click)="manageSubscription()">
+      Manage
+    </button>
+  </mat-card-actions>
+</mat-card>

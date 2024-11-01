@@ -1,0 +1,21 @@
+.subscription-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.subscription-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
