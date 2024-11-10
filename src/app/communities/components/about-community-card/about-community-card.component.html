@@ -1,0 +1,14 @@
+<mat-card class="about-community-card">
+  <div class="image-container">
+    <img mat-card-image [src]="community.image" alt="{{ community.title }}" class="community-image">
+    <div class="image-overlay">
+      <div class="overlay-text">community by {{ community.expertId }}</div>
+    </div>
+  </div>
+  <mat-card-header>
+    <mat-card-title>{{ community.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ community.description }}</p>
+  </mat-card-content>
+</mat-card>

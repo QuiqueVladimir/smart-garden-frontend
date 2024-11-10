@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.about-community-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+.image-container {
+  position: relative;
+}
+
+.community-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 0;
+}
+
+.overlay-text {
+  margin: 0 15px;
+}
