@@ -1,0 +1,21 @@
+.community-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 750px;
+
+}
+
+mat-tab-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 1020px) {
+  .community-list {
+    flex-direction: column;
+    display: block;
+    flex-wrap: nowrap;
+  }
+}
+

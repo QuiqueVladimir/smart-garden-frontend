@@ -1,0 +1,22 @@
+<mat-tab-group>
+  <mat-tab label="Purchased Communities">
+    <div class="community-list">
+      <div *ngIf="paginatedPurchasedCommunities.length === 0">No purchased communities available.</div>
+      <app-community-card *ngFor="let community of paginatedPurchasedCommunities" [community]="community"></app-community-card>
+    </div>
+    <mat-paginator [length]="purchasedCommunities.length"
+                   [pageSize]="9"
+                   (page)="updatePaginatedPurchasedCommunities($event)">
+    </mat-paginator>
+  </mat-tab>
+  <mat-tab label="Owned Communities">
+    <div class="community-list">
+      <div *ngIf="paginatedOwnedCommunities.length === 0">No owned communities available.</div>
+      <app-community-card *ngFor="let community of paginatedOwnedCommunities" [community]="community"></app-community-card>
+    </div>
+    <mat-paginator [length]="ownedCommunities.length"
+                   [pageSize]="9"
+                   (page)="updatePaginatedOwnedCommunities($event)">
+    </mat-paginator>
+  </mat-tab>
+</mat-tab-group>
