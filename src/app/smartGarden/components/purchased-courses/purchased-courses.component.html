@@ -1,9 +1,0 @@
-<div *ngIf="listCourses.length > 0; else noCourses">
-  <div *ngFor="let course of listCourses">
-    <app-course-card [course]="course"></app-course-card>
-  </div>
-  <mat-paginator [length]="totalCourses" [pageSize]="coursesPerPage" (page)="onPageChange($event)"></mat-paginator>
-</div>
-<ng-template #noCourses>
-  <p>No purchased courses available.</p>
-</ng-template>
