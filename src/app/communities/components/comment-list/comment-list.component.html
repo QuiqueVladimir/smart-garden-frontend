@@ -1,0 +1,6 @@
+<div class="comment-list">
+  <div *ngFor="let comment of visibleComments">
+    <app-comment-card [commentE]="comment" (reply)="handleReply($event)"></app-comment-card>
+  </div>
+  <button mat-button *ngIf="commentsToShow < comments.length" (click)="viewMore()">View More</button>
+</div>
