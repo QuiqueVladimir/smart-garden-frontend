@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Course} from "../../models/course.entity";
+import {Course} from "../../../shared/models/course/course.entity";
 import {
   MatCard,
   MatCardActions,

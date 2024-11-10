@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {BaseService} from "../../../shared/services/base.service";
-import {Course} from "../../models/course.entity";
+import {Course} from "../../../shared/models/course/course.entity";
 import {Module} from "../../models/module.entity";
 import {catchError, Observable, retry} from "rxjs";
 

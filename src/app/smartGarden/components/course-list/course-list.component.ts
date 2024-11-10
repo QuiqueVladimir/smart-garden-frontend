@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CourseService} from "../../services/course/course.service";
-import {Course} from "../../models/course.entity";
+import {Course} from "../../../shared/models/course/course.entity";
 import {CourseCardComponent} from "../course-card/course-card.component";
 import {NgForOf} from "@angular/common";
 import {MatPaginator} from "@angular/material/paginator";
