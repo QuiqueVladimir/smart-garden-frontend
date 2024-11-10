@@ -1,0 +1,26 @@
+.publication-card {
+  margin: 5px;
+  min-width: 540px;
+}
+
+.publication-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+.like-button, .comment-button {
+  margin-right: 10px;
+}
+
+.like-button.liked {
+  color: #e33f3f;
+}
+
+@media (max-width: 768px) {
+  .publication-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
