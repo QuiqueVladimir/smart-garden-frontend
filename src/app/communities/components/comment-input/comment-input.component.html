@@ -1,0 +1,18 @@
+<div class="comment-input">
+  <div *ngIf="parentCommentId" class="reply-info">
+    Reply to user with comment ID: {{ parentCommentId }}
+    <button mat-button type="button" (click)="cancelReply()">Cancel</button>
+  </div>
+  <div class="form-wrapper">
+    <form class="form-content" [formGroup]="commentForm" (ngSubmit)="submitComment()">
+      <textarea #commentBox class="box-input" formControlName="content" placeholder="Write a comment..."></textarea>
+      <div *ngIf="showImageUrlInput">
+        <input type="text" formControlName="imageUrl" placeholder="Image URL">
+      </div>
+      <div class="button-group">
+        <button mat-button type="button" (click)="toggleImageUrlInput()">Add Image</button>
+        <button mat-button type="submit" [disabled]="commentForm.invalid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
