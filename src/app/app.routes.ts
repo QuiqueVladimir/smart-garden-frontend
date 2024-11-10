@@ -6,15 +6,19 @@ import {CreateAccountComponent} from "./public/pages/create-account/create-accou
 import {RestorePasswordComponent} from "./public/pages/restore-password/restore-password.component";
 import {NewPasswordComponent} from "./public/pages/new-password/new-password.component";
 import {UserTypeAccountComponent} from "./public/pages/user-type-account/user-type-account.component";
-import {PurchasedCoursesComponent} from "./smartGarden/components/purchased-courses/purchased-courses.component";
 import {ManagementSubscriptionPageComponent} from "./subscriptions/pages/management-subscription-page/management-subscription-page.component";
 /**/
 import {CourseListComponent} from "./smartGarden/components/course-list/course-list.component";
+import {CommunityPageComponent} from "./communities/pages/community-page/community-page.component";
 import {CourseDetailComponent} from "./smartGarden/components/course-detail/course-detail.component";
 import {ModuleDetailComponent} from "./smartGarden/components/module-detail/module-detail.component";
 import {UserHomePageComponent} from "./public/pages/user-home-page/user-home-page.component";
 import {NgModule} from "@angular/core";
 import {AuthGuard} from "./auth.guard";
+import {
+  CommunitiesManagementPageComponent
+} from "./communities/pages/communities-management-page/communities-management-page.component";
+
 
 
 export const routes: Routes = [
@@ -28,9 +32,11 @@ export const routes: Routes = [
       { path: '', component: CourseListComponent},
       { path: 'home', redirectTo: 'list'},
       { path: "list", component: CourseListComponent},
-      { path: "course/:courseId", component: CourseDetailComponent},
-      { path: "courses/:courseId/modules/:moduleId",  component: ModuleDetailComponent},
+      { path: "communities", component: CommunitiesManagementPageComponent},
+      {path: "communities/:id", component: CommunityPageComponent},
       { path: "subscriptions", component: ManagementSubscriptionPageComponent},
+      { path: "course/:courseId", component: CourseDetailComponent},
+      { path: "courses/:courseId/modules/:moduleId",  component: ModuleDetailComponent}
     ]},
   { path: '**', component: PageNotFoundComponent }
 ];

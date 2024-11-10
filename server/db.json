@@ -91,73 +91,7 @@
       "description": "Learn the basics of hydroponics",
       "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
       "expertId": 1,
-      "communityId": 1,
-      "price": 50,
-      "rating": 4.5,
-      "numberModules": 2
-    },
-    {
-      "id": 3,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
-      "price": 50,
-      "rating": 4.5,
-      "numberModules": 2
-    },
-    {
-      "id": 4,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
-      "price": 50,
-      "rating": 4.5,
-      "numberModules": 2
-    },
-    {
-      "id": 5,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
-      "price": 50,
-      "rating": 4.5,
-      "numberModules": 2
-    },
-    {
-      "id": 6,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
-      "price": 50,
-      "rating": 4.5,
-      "numberModules": 2
-    },
-    {
-      "id": 7,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
-      "price": 50,
-      "rating": 4.5,
-      "numberModules": 2
-    },
-    {
-      "id": 8,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
+      "communityId": 2,
       "price": 50,
       "rating": 4.5,
       "numberModules": 2
@@ -171,8 +105,13 @@
       "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/embed/rnJlmDV2GBE?si=iUh89TDXHq_wwKXA",
       "transcription": "SDSPDLSDPSLD",
-      "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"]
+      "images": [
+        "https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"
+      ],
+      "links": [
+        "https://www.google.com",
+        "https://www.youtube.com"
+      ]
     },
     {
       "id": 2,
@@ -181,18 +120,29 @@
       "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/watch?v=2",
       "transcription": "module.txt",
-      "images": ["image1.jpg", "image2.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"]
+      "images": [
+        "image1.jpg",
+        "image2.jpg"
+      ],
+      "links": [
+        "https://www.google.com",
+        "https://www.youtube.com"
+      ]
     },
     {
-    "id": 3,
-    "courseId": 2,
-    "title": "Module 1: Getting Started with Hydroponics",
-    "description": "Learn the basics of hydroponics",
-    "video": "https://www.youtube.com/watch?v=1",
-    "transcription": "LWLDWMDWD",
-    "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
-    "links": ["https://www.google.com", "https://www.youtube.com"]
+      "id": 3,
+      "courseId": 2,
+      "title": "Module 1: Getting Started with Hydroponics",
+      "description": "Learn the basics of hydroponics",
+      "video": "https://www.youtube.com/watch?v=1",
+      "transcription": "LWLDWMDWD",
+      "images": [
+        "https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"
+      ],
+      "links": [
+        "https://www.google.com",
+        "https://www.youtube.com"
+      ]
     },
     {
       "id": 4,
@@ -201,8 +151,14 @@
       "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/watch?v=2",
       "transcription": "module.txt",
-      "images": ["image1.jpg", "image2.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"]
+      "images": [
+        "image1.jpg",
+        "image2.jpg"
+      ],
+      "links": [
+        "https://www.google.com",
+        "https://www.youtube.com"
+      ]
     }
   ],
   "progress": [
@@ -231,18 +187,27 @@
       "status": "In Progress"
     }
   ],
-  "purchased_courses": [
+  "purchasedCourses": [
     {
       "id": 1,
       "userId": 2,
       "courseId": 1,
-      "date": "2021-01-01 12:00:00"
+      "communityAccess": "active",
+      "purchaseDate": "2021-01-01 12:00:00"
     },
     {
       "id": 2,
       "userId": 4,
       "courseId": 1,
-      "date": "2021-01-01 12:00:00"
+      "communityAccess": "active",
+      "purchaseDate": "2021-01-01 12:00:00"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "courseId": 2,
+      "communityAccess": "active",
+      "purchaseDate": "2021-01-01 12:00:00"
     }
   ],
   "communities": [
@@ -250,30 +215,209 @@
       "id": 1,
       "expertId": 1,
       "courseId": 1,
-      "title": "Hydroponics Community",
-      "description": "A community for hydroponics enthusiasts",
-      "image": "image.jpg",
-      "membersId": [2, 3, 4],
-      "fixedMessageId": 1
+      "title": "Hydroponics Community :)",
+      "description": "A community for hydroponics enthusiasts. Share your progress and ask questions.",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "fixedMessageId": null
+    },
+    {
+      "id": 2,
+      "expertId": 1,
+      "courseId": 2,
+      "title": "CARROT FOREVER",
+      "description": "A community for carrots ",
+      "image": "https://img2.rtve.es/i/?w=1600&i=1653900605179.jpg",
+      "fixedMessageId": 0
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "isPinned": false,
+      "numberLikes": 1,
+      "numberComments": 8
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "communityId": 1,
+      "content": "aaaa",
+      "imageUrl": "",
+      "date": "2024-11-05T15:09:36.695Z",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "communityId": 1,
+      "content": "Art ",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Meisje_met_de_parel.jpg/640px-Meisje_met_de_parel.jpg",
+      "date": "2024-11-05T15:11:34.448Z",
+      "isPinned": false,
+      "numberLikes": 1,
+      "numberComments": 2
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "communityId": 1,
+      "content": "Where can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "imageUrl": "",
+      "date": "2024-11-05T18:03:16.243Z",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 8,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Quien soy",
+      "imageUrl": "",
+      "date": "2024-11-10T06:05:02.495Z",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
     }
   ],
   "comments": [
     {
       "id": 1,
       "userId": 2,
-      "communityId": 1,
-      "content": "Great course!",
-      "image": ["image1.jpg", "image2.jpg"],
+      "publicationId": 1,
+      "content": "I Great!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
       "date": "2021-01-01 12:00:00",
-      "likes": 5,
-      "parentCommentId": 2
+      "parentCommentId": null,
+      "numberLikes": 1,
+      "numberResponses": 0
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "publicationId": 1,
+      "content": "I Great!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "parentCommentId": null,
+      "numberLikes": 0,
+      "numberResponses": 0
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "publicationId": 1,
+      "content": "prueba comentrarios",
+      "imageUrl": "",
+      "date": "2024-11-05T05:24:50.925Z",
+      "parentCommentId": null,
+      "numberLikes": 1,
+      "numberResponses": 0
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "publicationId": 1,
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+      "imageUrl": "",
+      "date": "2024-11-05T05:25:24.864Z",
+      "parentCommentId": null,
+      "numberLikes": 1,
+      "numberResponses": 0
+    },
+    {
+      "id": 26,
+      "userId": 1,
+      "publicationId": 6,
+      "content": "taweno",
+      "imageUrl": "",
+      "date": "2024-11-05T21:04:13.178Z",
+      "parentCommentId": null,
+      "numberLikes": 0,
+      "numberResponses": 0
+    },
+    {
+      "id": 28,
+      "userId": 1,
+      "publicationId": 6,
+      "content": "28",
+      "imageUrl": "",
+      "date": "2024-11-05T22:10:47.465Z",
+      "parentCommentId": null,
+      "numberLikes": 0,
+      "numberResponses": 0
+    }
+  ],
+  "publicationLikes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "publicationId": 1,
+      "date": "2024-11-06T02:04:35.435Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "publicationId": 6,
+      "date": "2024-11-06T15:17:11.873Z"
+    }
+  ],
+  "commentLikes": [
+    {
+      "id": 3,
+      "userId": 1,
+      "commentId": 1,
+      "date": "2024-11-06T00:41:26.511Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "commentId": 7,
+      "date": "2024-11-06T00:42:29.650Z"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "commentId": 8,
+      "date": "2024-11-06T00:42:31.635Z"
     }
   ],
   "stores": [
     {
       "id": 1,
       "expertId": 1,
-      "products": [1]
+      "products": [
+        1
+      ]
     }
   ],
   "products": [
@@ -283,12 +427,21 @@
       "description": "A starter kit for hydroponics",
       "front": "image.jpg",
       "price": 50,
-      "image": ["image1.jpg", "image2.jpg"],
-      "document": ["doc1.pdf", "doc2.pdf"],
-      "text": ["text1", "text2"]
+      "image": [
+        "image1.jpg",
+        "image2.jpg"
+      ],
+      "document": [
+        "doc1.pdf",
+        "doc2.pdf"
+      ],
+      "text": [
+        "text1",
+        "text2"
+      ]
     }
   ],
-  "purchased_products": [
+  "purchased-products": [
     {
       "id": 1,
       "userId": 2,
@@ -381,4 +534,3 @@
     }
   ]
 }
-
