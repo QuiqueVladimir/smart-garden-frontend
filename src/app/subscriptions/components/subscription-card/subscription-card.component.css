@@ -1,0 +1,20 @@
+mat-card {
+  margin: 20px;
+  width: 250px;
+  align-items: center;
+}
+
+.duration, .description {
+  font-size: 0.9em;
+}
+
+.cost {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.buy-button {
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  display: block;
+}

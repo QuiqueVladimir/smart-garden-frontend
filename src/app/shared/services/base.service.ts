@@ -7,7 +7,7 @@ protected httpOptions={ headers: new HttpHeaders({'Content-Type':'application/js
 
 protected http:HttpClient = inject(HttpClient);
 
-protected basePath: string = `https://fake-api-smartgarden.vercel.app`;
+protected basePath: string = `http://localhost:3000`;
 
 protected resourceEndPoint: string = '/resources';
 

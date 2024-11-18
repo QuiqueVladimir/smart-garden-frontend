@@ -1,0 +1,23 @@
+.comment-card{
+  margin: 5px;
+}
+
+.comment-image{
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 3px 0;
+}
+.comment-user {
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.comment-date {
+  margin-left: auto;
+  font-size: smaller;
+}
+
+.like-button.liked {
+  color: #e33f3f;
+}

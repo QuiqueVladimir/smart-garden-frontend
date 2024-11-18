@@ -1,11 +1,8 @@
-<div class="course-container">
-  <div *ngFor="let course of listCourses" class="course-card-container">
-    <app-course-card [course]="course"></app-course-card>
-  </div>
+<div class="course-list">
+  <app-course-card *ngFor="let course of paginatedCourses" [course]="course"></app-course-card>
+  <div *ngIf="loading" class="loading-spinner"></div>
 </div>
-
-<mat-paginator [length]="totalCourses"
-               [pageSize]="coursesPerPage"
-               (page)="onPageChange($event)"
-               >
+<mat-paginator [length]="courses.length"
+               [pageSize]="12"
+               (page)="updatePaginatedCourses($event)">
 </mat-paginator>

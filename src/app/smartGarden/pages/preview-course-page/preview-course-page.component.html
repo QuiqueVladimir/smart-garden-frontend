@@ -1,0 +1,34 @@
+<mat-toolbar class="header-custom">
+  <span>Details of the course</span>
+</mat-toolbar>
+<div class="general-Detail">
+  <div class="course-detail-container">
+    <div class="course-info">
+      <img [src]="course.image" alt="{{ course.title }}" class="course-image">
+      <h2>{{ course.title }}</h2>
+      <p>{{ course.description }}</p>
+      <p><strong>Number of Modules:</strong> {{ course.numberModules }}</p>
+      <p><strong>Rating:</strong> {{ course.rating }}</p>
+      <p><strong>Price:</strong> ${{ course.price }}</p>
+      <div *ngIf="course.communityId !== null" class="community-active">
+        Community Active
+      </div>
+    </div>
+    <div class="module-list">
+      <h3>Modules</h3>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let module of modules">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ module.title }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{ module.description }}</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+  <div class="buy-container">
+    <app-purchase [course]="course"></app-purchase>
+  </div>
+</div>

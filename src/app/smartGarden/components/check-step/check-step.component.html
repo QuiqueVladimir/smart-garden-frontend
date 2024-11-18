@@ -1,0 +1,15 @@
+<div class="summary-container">
+  <h2>Course Summary</h2>
+  <p><strong>Title:</strong> {{ courseTitle }}</p>
+  <p><strong>Description:</strong> {{ courseDescription }}</p>
+  <p><strong>Price:</strong> {{ coursePrice }}</p>
+  <h3>Modules</h3>
+  <ul>
+    <li *ngFor="let title of moduleTitles; let i = index">
+      Module {{ i + 1 }}: {{ title }}
+    </li>
+  </ul>
+  <div class="community-message">
+    You can create a community for this course from the "Owned Communities" section.
+  </div>
+</div>

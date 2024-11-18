@@ -76,8 +76,8 @@
   "courses": [
     {
       "id": 1,
-      "title": "Introduction to Hydropinics aaaaaaaaaasdkmasd asdkawd k awdk wd ",
-      "description": "Learn the basicwdwwwwwwwwwwwwwws of hydroponics",
+      "title": "Comprehensive Guide to Hydroponics",
+      "description": "Explore the essentials of hydroponics, including setup tips, nutrient management, and the benefits of soil-free cultivation.",
       "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
       "expertId": 1,
       "communityId": 1,
@@ -87,80 +87,155 @@
     },
     {
       "id": 2,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
+      "title": "Hydroponic Plant Care Essentials",
+      "description": "A step-by-step overview on maintaining healthy hydroponic plants, focusing on efficient watering and lighting strategies.",
       "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
       "expertId": 1,
-      "communityId": 1,
+      "communityId": 2,
       "price": 50,
       "rating": 4.5,
       "numberModules": 2
     },
     {
       "id": 3,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
+      "title": "Strawberry Hydroponics Overview",
+      "description": "Discover methods to grow strawberries using hydroponic systems, ensuring optimal growth and fruit quality.",
+      "image": "https://images.pexels.com/photos/18785800/pexels-photo-18785800/free-photo-of-close-up-of-strawberries-growing-in-a-greenhouse.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
       "price": 50,
       "rating": 4.5,
-      "numberModules": 2
+      "numberModules": 0
     },
     {
       "id": 4,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
+      "title": "LED Lighting in Hydroponics",
+      "description": "Learn about the integration of LED lighting in hydroponic systems to boost plant growth and energy efficiency.",
+      "image": "https://images.pexels.com/photos/14244628/pexels-photo-14244628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
       "price": 50,
       "rating": 4.5,
-      "numberModules": 2
+      "numberModules": 0
     },
     {
       "id": 5,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
+      "title": "Advanced Techniques in Hydroponic Gardening",
+      "description": "Dive into advanced hydroponic techniques for optimizing plant growth and maximizing yield.",
       "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
+      "expertId": 3,
+      "communityId": null,
       "price": 50,
       "rating": 4.5,
-      "numberModules": 2
+      "numberModules": 0
     },
     {
       "id": 6,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
+      "title": "Urban Hydroponic Systems Setup",
+      "description": "A practical guide to setting up hydroponic systems in urban environments for efficient space use.",
+      "image": "https://images.pexels.com/photos/10368475/pexels-photo-10368475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
       "price": 50,
       "rating": 4.5,
-      "numberModules": 2
+      "numberModules": 0
     },
     {
       "id": 7,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
+      "title": "Hydroponic Vegetable Cultivation",
+      "description": "Learn how to grow a variety of vegetables using efficient hydroponic systems to maintain quality and health.",
+      "image": "https://images.pexels.com/photos/10837216/pexels-photo-10837216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
       "price": 50,
       "rating": 4.5,
-      "numberModules": 2
+      "numberModules": 0
     },
     {
       "id": 8,
-      "title": "Introduction to Hydropinics",
-      "description": "Learn the basics of hydroponics",
-      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
-      "expertId": 1,
-      "communityId": 1,
+      "title": "Efficient Hydroponic Water Management",
+      "description": "Understand key strategies for water management to optimize your hydroponic system’s sustainability.",
+      "image": "https://images.pexels.com/photos/4199756/pexels-photo-4199756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
       "price": 50,
       "rating": 4.5,
-      "numberModules": 2
+      "numberModules": 0
+    },
+    {
+      "id": 9,
+      "title": "Hydroponic Herb Gardening Tips",
+      "description": "Grow fresh herbs using hydroponics, with insights on maintaining flavor and growth rates.",
+      "image": "https://images.pexels.com/photos/2176158/pexels-photo-2176158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 0
+    },
+    {
+      "id": 10,
+      "title": "Hydroponic Gardening for Beginners",
+      "description": "Start your hydroponic journey with simple techniques and essential tips for successful plant growth.",
+      "image": "https://images.pexels.com/photos/7299994/pexels-photo-7299994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 0
+    },
+    {
+      "id": 11,
+      "title": "Sustainable Hydroponics Practices",
+      "description": "Explore sustainable methods in hydroponic farming that prioritize eco-friendly practices and resource efficiency.",
+      "image": "https://images.pexels.com/photos/6508401/pexels-photo-6508401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 0
+    },
+    {
+      "id": 12,
+      "title": "Hydroponic System Maintenance",
+      "description": "Learn key maintenance strategies to keep your hydroponic system running smoothly and efficiently over time.",
+      "image": "https://images.pexels.com/photos/3912509/pexels-photo-3912509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 0
+    },
+    {
+      "id": 13,
+      "title": "Hydroponic Pest Control Solutions",
+      "description": "Identify and manage common pests in hydroponic systems to ensure healthy, pest-free crops.",
+      "image": "https://images.pexels.com/photos/3912947/pexels-photo-3912947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 0
+    },
+    {
+      "id": 14,
+      "title": "Maximizing Hydroponic Yields",
+      "description": "Techniques and tips to increase productivity and optimize yield in your hydroponic gardening projects.",
+      "image": "https://images.pexels.com/photos/5831004/pexels-photo-5831004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "expertId": 3,
+      "communityId": null,
+      "price": 50,
+      "rating": 4.5,
+      "numberModules": 0
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "creatorId": 1,
+      "name": "Hydroponics",
+      "createdAt": "2021-01-01 12:00:00"
     }
   ],
   "modules": [
@@ -171,8 +246,7 @@
       "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/embed/rnJlmDV2GBE?si=iUh89TDXHq_wwKXA",
       "transcription": "SDSPDLSDPSLD",
-      "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"]
+      "order": 1
     },
     {
       "id": 2,
@@ -181,18 +255,16 @@
       "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/watch?v=2",
       "transcription": "module.txt",
-      "images": ["image1.jpg", "image2.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"]
+      "order": 2
     },
     {
-    "id": 3,
-    "courseId": 2,
-    "title": "Module 1: Getting Started with Hydroponics",
-    "description": "Learn the basics of hydroponics",
-    "video": "https://www.youtube.com/watch?v=1",
-    "transcription": "LWLDWMDWD",
-    "images": ["https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg"],
-    "links": ["https://www.google.com", "https://www.youtube.com"]
+      "id": 3,
+      "courseId": 2,
+      "title": "Module 1: Getting Started with Hydroponics",
+      "description": "Learn the basics of hydroponics",
+      "video": "https://www.youtube.com/watch?v=1",
+      "transcription": "LWLDWMDWD",
+      "order": 1
     },
     {
       "id": 4,
@@ -201,48 +273,96 @@
       "description": "Learn the basics of hydroponics",
       "video": "https://www.youtube.com/watch?v=2",
       "transcription": "module.txt",
-      "images": ["image1.jpg", "image2.jpg"],
-      "links": ["https://www.google.com", "https://www.youtube.com"]
+      "order": 2
+    },
+    {
+      "id": 5,
+      "courseId": 15,
+      "title": "3e3d",
+      "description": "sdsd",
+      "video": "sdsd",
+      "transcription": "3434",
+      "order": 1
     }
   ],
-  "progress": [
+  "imagesModule": [
     {
-      "userId": 2,
+      "id": 1,
+      "moduleId": 1,
+      "title": "Hidroponic Techniques",
+      "imageUrl": "https://i.postimg.cc/8ckfgj70/T-cnicas-Hidrop-nicas.jpg",
+      "description": "Hydroponic Techniques for beginners and experts",
+      "createdAt": "2021-01-01 12:00:00"
+    }
+  ],
+  "progressCourses": [
+    {
+      "id": 1,
+      "userId": 1,
       "courseId": 1,
       "moduleId": 1,
-      "status": "Completed"
-    },
+      "completedDate": "2021-01-01 12:00:00"
+    }
+  ],
+  "paymentMethods": [
     {
+      "id": 1,
       "userId": 2,
-      "courseId": 1,
-      "moduleId": 2,
-      "status": "In Progress"
+      "cardHolder": "Bob Williams",
+      "cardNumber": "1234567890123456",
+      "expirationDate": "12/25",
+      "cvv": "123"
     },
     {
-      "userId": 3,
-      "courseId": 1,
-      "moduleId": 1,
-      "status": "In Progress"
+      "id": 2,
+      "userId": 2,
+      "cardHolder": "John F kenedi",
+      "cardNumber": "1234567891234567",
+      "expirationDate": "12/12",
+      "cvv": "431"
     },
     {
+      "id": 3,
       "userId": 4,
-      "courseId": 1,
-      "moduleId": 2,
-      "status": "In Progress"
+      "cardHolder": "Jara Benites",
+      "cardNumber": "1231231231231232",
+      "expirationDate": "12/11",
+      "cvv": "123"
     }
   ],
-  "purchased_courses": [
+  "bankAccounts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "accountNumber": "1234567890",
+      "bankName": "Bank of Example",
+      "routingNumber": "987654321"
+    }
+  ],
+  "purchasedCourses": [
     {
       "id": 1,
       "userId": 2,
       "courseId": 1,
-      "date": "2021-01-01 12:00:00"
+      "amount": 50,
+      "purchaseDate": "2021-01-01 12:00:00",
+      "cardNumberMasked": "**** **** **** 3456"
     },
     {
-      "id": 2,
+      "id": 3,
+      "userId": 2,
+      "courseId": 2,
+      "amount": 50,
+      "purchaseDate": "2021-01-01 12:00:00",
+      "cardNumberMasked": "**** **** **** 5678"
+    },
+    {
+      "id": 4,
       "userId": 4,
       "courseId": 1,
-      "date": "2021-01-01 12:00:00"
+      "amount": 50,
+      "purchaseDate": "2024-11-16T22:42:07.199Z",
+      "cardNumberMasked": "**** **** **** 1232"
     }
   ],
   "communities": [
@@ -250,30 +370,222 @@
       "id": 1,
       "expertId": 1,
       "courseId": 1,
-      "title": "Hydroponics Community",
-      "description": "A community for hydroponics enthusiasts",
-      "image": "image.jpg",
-      "membersId": [2, 3, 4],
-      "fixedMessageId": 1
+      "title": "Hydroponics Community :)",
+      "description": "A community for hydroponics enthusiasts. Share your progress and ask questions.",
+      "image": "https://redagricola.com/wp-content/uploads/2023/05/dsc_0022-scaled.jpg",
+      "status": "available",
+      "fixedMessageId": null
+    },
+    {
+      "id": 2,
+      "expertId": 1,
+      "courseId": 2,
+      "title": "CARROT FOREVER",
+      "description": "A community for carrots ",
+      "image": "https://img2.rtve.es/i/?w=1600&i=1653900605179.jpg",
+      "status": "available",
+      "fixedMessageId": 0
+    }
+  ],
+  "bannedUserCommunity": [
+    {
+      "id": 1,
+      "userId": 6,
+      "communityId": 1,
+      "note": "misbehavior",
+      "bannedDate": "2021-01-01 12:00:00"
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "isPinned": false,
+      "numberLikes": 1,
+      "numberComments": 8
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Great course!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "communityId": 1,
+      "content": "aaaa",
+      "imageUrl": "",
+      "date": "2024-11-05T15:09:36.695Z",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "communityId": 1,
+      "content": "Art ",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Meisje_met_de_parel.jpg/640px-Meisje_met_de_parel.jpg",
+      "date": "2024-11-05T15:11:34.448Z",
+      "isPinned": false,
+      "numberLikes": 1,
+      "numberComments": 2
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "communityId": 1,
+      "content": "Where can I get some?\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "imageUrl": "",
+      "date": "2024-11-05T18:03:16.243Z",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 8,
+      "userId": 2,
+      "communityId": 1,
+      "content": "Quien soy",
+      "imageUrl": "",
+      "date": "2024-11-10T06:05:02.495Z",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
+    },
+    {
+      "id": 9,
+      "userId": 4,
+      "communityId": 1,
+      "content": "Prueba fase 1 ",
+      "imageUrl": "",
+      "date": "2024-11-16T22:42:31.012Z",
+      "isPinned": false,
+      "numberLikes": 0,
+      "numberComments": 0
     }
   ],
   "comments": [
     {
       "id": 1,
       "userId": 2,
-      "communityId": 1,
-      "content": "Great course!",
-      "image": ["image1.jpg", "image2.jpg"],
+      "publicationId": 1,
+      "content": "I Great!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
       "date": "2021-01-01 12:00:00",
-      "likes": 5,
-      "parentCommentId": 2
+      "parentCommentId": null,
+      "numberLikes": 1,
+      "numberResponses": 0
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "publicationId": 1,
+      "content": "I Great!",
+      "imageUrl": "https://s1.elespanol.com/2016/12/16/social/memes-humor-redes_sociales_178744040_23538149_1706x1280.jpg",
+      "date": "2021-01-01 12:00:00",
+      "parentCommentId": null,
+      "numberLikes": 0,
+      "numberResponses": 0
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "publicationId": 1,
+      "content": "prueba comentrarios",
+      "imageUrl": "",
+      "date": "2024-11-05T05:24:50.925Z",
+      "parentCommentId": null,
+      "numberLikes": 1,
+      "numberResponses": 0
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "publicationId": 1,
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+      "imageUrl": "",
+      "date": "2024-11-05T05:25:24.864Z",
+      "parentCommentId": null,
+      "numberLikes": 1,
+      "numberResponses": 0
+    },
+    {
+      "id": 26,
+      "userId": 1,
+      "publicationId": 6,
+      "content": "taweno",
+      "imageUrl": "",
+      "date": "2024-11-05T21:04:13.178Z",
+      "parentCommentId": null,
+      "numberLikes": 0,
+      "numberResponses": 0
+    },
+    {
+      "id": 28,
+      "userId": 1,
+      "publicationId": 6,
+      "content": "28",
+      "imageUrl": "",
+      "date": "2024-11-05T22:10:47.465Z",
+      "parentCommentId": null,
+      "numberLikes": 0,
+      "numberResponses": 0
     }
   ],
-  "stores": [
+  "publicationLikes": [
     {
       "id": 1,
-      "expertId": 1,
-      "products": [1]
+      "userId": 1,
+      "publicationId": 1,
+      "date": "2024-11-06T02:04:35.435Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "publicationId": 6,
+      "date": "2024-11-06T15:17:11.873Z"
+    }
+  ],
+  "commentLikes": [
+    {
+      "id": 3,
+      "userId": 1,
+      "commentId": 1,
+      "date": "2024-11-06T00:41:26.511Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "commentId": 7,
+      "date": "2024-11-06T00:42:29.650Z"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "commentId": 8,
+      "date": "2024-11-06T00:42:31.635Z"
     }
   ],
   "products": [
@@ -283,12 +595,21 @@
       "description": "A starter kit for hydroponics",
       "front": "image.jpg",
       "price": 50,
-      "image": ["image1.jpg", "image2.jpg"],
-      "document": ["doc1.pdf", "doc2.pdf"],
-      "text": ["text1", "text2"]
+      "image": [
+        "image1.jpg",
+        "image2.jpg"
+      ],
+      "document": [
+        "doc1.pdf",
+        "doc2.pdf"
+      ],
+      "text": [
+        "text1",
+        "text2"
+      ]
     }
   ],
-  "purchased_products": [
+  "purchasedProducts": [
     {
       "id": 1,
       "userId": 2,
@@ -300,7 +621,7 @@
     {
       "id": 1,
       "name": "Basic",
-      "type_user": "Expert",
+      "typeUser": "Expert",
       "price": 9.99,
       "description": "Create courses and share your knowledge with the world",
       "duration": 30
@@ -308,7 +629,7 @@
     {
       "id": 2,
       "name": "Community expansion",
-      "type_user": "Expert",
+      "typeUser": "Expert",
       "price": 14.99,
       "description": "Create courses and communities to share progress",
       "duration": 30
@@ -316,7 +637,7 @@
     {
       "id": 3,
       "name": "Pro Plan Expert",
-      "type_user": "Expert",
+      "typeUser": "Expert",
       "price": 24.99,
       "description": "Create a custom store where you can sell additional content and you will also have all the benefits of community expansion",
       "duration": 90
@@ -324,55 +645,60 @@
     {
       "id": 4,
       "name": "Learning Plan",
-      "type_user": "Learner",
+      "typeUser": "Learner",
       "price": 0,
       "description": "Discover hydroponics at your own pace, you can access digital courses, communities and personalized stores",
       "duration": "unlimited"
     }
   ],
-  "subscriptions_users": [
+  "subscriptionsUsers": [
     {
       "id": 1,
       "userId": 1,
-      "subscription_id": 1,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "subscriptionId": 1,
+      "status": "active",
+      "date_init": "2012-01-31 23:59:59",
+      "date_end": "2026-01-31 23:59:59"
     },
     {
       "id": 2,
       "userId": 2,
-      "subscription_id": 4,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "subscriptionId": 4,
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 3,
       "userId": 3,
-      "subscription_id": 2,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-04-01 12:00:00"
+      "subscriptionId": 2,
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 4,
       "userId": 4,
-      "subscription_id": 4,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "subscriptionId": 4,
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 5,
       "userId": 5,
-      "subscription_id": 3,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "subscriptionId": 3,
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     },
     {
       "id": 6,
       "userId": 6,
-      "subscription_id": 4,
-      "date_init": "2021-01-01 12:00:00",
-      "date_end": "2021-01-31 12:00:00"
+      "subscriptionId": 4,
+      "status": "active",
+      "date_init": "2021-01-01T12:00:00.000Z",
+      "date_end": "2025-01-31T12:00:00.000Z"
     }
   ]
 }
-

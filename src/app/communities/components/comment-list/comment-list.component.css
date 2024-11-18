@@ -1,0 +1,7 @@
+.comment-list {
+  max-height: 800px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

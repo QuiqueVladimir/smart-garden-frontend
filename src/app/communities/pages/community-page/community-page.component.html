@@ -1,0 +1,20 @@
+<div class="community-page">
+  <div class="fixed-header">
+    <button mat-icon-button (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span class="community-title">{{ community.title | slice:0:20 }}{{ community.title.length > 20 ? '...' : '' }}</span>
+    <span class="spacer"></span>
+    <button mat-button (click)="viewCourse()">View Course</button>
+    <button *ngIf="isExpert()" mat-button (click)="editCommunity()">Edit</button>
+  </div>
+  <div class="scrollable-content">
+    <app-about-community-card [community]="community"></app-about-community-card>
+    <div class="publication-create">
+      <app-publication-input [communityId]="community.id"></app-publication-input>
+    </div>
+    <div class="community-chat">
+      <app-publications-list [communityId]="community.id"></app-publications-list>
+    </div>
+  </div>
+</div>

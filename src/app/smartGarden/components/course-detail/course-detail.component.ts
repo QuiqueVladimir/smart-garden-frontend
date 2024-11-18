@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../../services/course/course.service";
-import {Course} from "../../models/course.entity";
+import {Course} from "../../../shared/models/course/course.entity";
 import {Module} from "../../models/module.entity";
 import {RouterLink} from "@angular/router";
 import {NgForOf} from "@angular/common";

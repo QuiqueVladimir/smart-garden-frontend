@@ -1,0 +1,40 @@
+<mat-toolbar>
+  <span>Create new course</span>
+  <button mat-button (click)="cancelOperation()">Cancel</button>
+</mat-toolbar>
+<div class="creation-page-container">
+  <mat-horizontal-stepper class="step-container" [linear]="true" (selectionChange)="onStepChange($event)" #stepper>
+    <mat-step [stepControl]="courseCreationStep.courseForm" [completed]="courseCreationStep.courseForm.valid">
+      <form [formGroup]="courseCreationStep.courseForm">
+        <ng-template matStepLabel>Course Details</ng-template>
+        <app-course-creation-step #courseCreationStep></app-course-creation-step>
+        <div class="step-buttons">
+          <button mat-button matStepperNext [disabled]="!courseCreationStep.courseForm.valid">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="moduleCreationStep.moduleForm" [completed]="moduleCreationStep.moduleForm.valid">
+      <form [formGroup]="moduleCreationStep.moduleForm">
+        <ng-template matStepLabel>Module Details</ng-template>
+        <app-module-creation-step #moduleCreationStep></app-module-creation-step>
+        <div class="step-buttons">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext (click)="collectCourseData()" [disabled]="!moduleCreationStep.moduleForm.valid" >Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [completed]="false">
+      <ng-template matStepLabel>Check and publish</ng-template>
+      <app-check-step
+        [courseTitle]="courseTitle"
+        [courseDescription]="courseDescription"
+        [coursePrice]="coursePrice"
+        [moduleTitles]="moduleTitles">
+      </app-check-step>
+      <div class="step-buttons">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="publishCourse()">Publish course</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

@@ -1,0 +1,14 @@
+  <div class="publication-input">
+    <div class="form-wrapper">
+      <form class="form-content" [formGroup]="publicationForm" (ngSubmit)="submitPublication()">
+        <textarea class="box-input" formControlName="content" placeholder="Write a publication..."></textarea>
+        <div *ngIf="showImageUrlInput">
+          <input type="text" formControlName="imageUrl" placeholder="Image URL">
+        </div>
+        <div class="button-group">
+          <button mat-button type="button" (click)="toggleImageUrlInput()">Add Image</button>
+          <button mat-button type="submit" [disabled]="publicationForm.invalid">Submit</button>
+        </div>
+      </form>
+  </div>
+</div>

@@ -5,8 +5,7 @@ export class Module {
   description: string;
   video: string;
   transcription: string;
-  images: string[];
-  links: string[];
+  order: number;
   constructor(module:{
     id: number,
     courseId: number,
@@ -14,16 +13,13 @@ export class Module {
     description: string,
     video: string,
     transcription?: string,
-    images?: string[],
-    links?: string[]}) {
+    order: number}) {
     this.id = module.id;
     this.courseId = module.courseId;
     this.title = module.title;
     this.description = module.description
     this.video = module.video;
     this.transcription = module.transcription || '';
-    this.images = module.images || [''];
-    this.links = module.links || [''];
-
+    this.order = module.order;
   }
 }

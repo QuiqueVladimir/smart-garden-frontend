@@ -1,0 +1,124 @@
+<div class="general-container">
+<div [formGroup]="moduleForm">
+  <div class="modules-details">Modules Details</div>
+  <div formArrayName="modules">
+    <div *ngFor="let module of modules.controls; let i = index" [formGroupName]="i">
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Module {{ i + 1 }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="module-view">
+
+          <div class="module-container">
+
+            <div class="title-container">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" required maxlength="80">
+                <mat-hint align="end">
+                  <span class="char-counter">{{(module.get('title')?.value || '').length}}/80</span>
+                </mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div class="description-container">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description" required cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" maxlength="200"></textarea>
+                <mat-hint align="end">
+                  <span class="char-counter">{{(module.get('description')?.value || '').length}}/200</span>
+                </mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div class="url-container">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>URL Video</mat-label>
+                <input matInput formControlName="urlVideo" required maxlength="800">
+                <mat-hint align="end">
+                  <span class="char-counter">{{(module.get('urlVideo')?.value || '').length}}/800</span>
+                </mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div class="transcription-container">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Transcription</mat-label>
+                <textarea matInput formControlName="transcription" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" maxlength="5000"></textarea>
+                <mat-hint align="end">
+                  <span class="char-counter">{{(module.get('transcription')?.value || '').length}}/5000</span>
+                </mat-hint>
+              </mat-form-field>
+            </div>
+
+          </div>
+          <div class="video-preview-container">
+            <div *ngIf="module.get('urlVideo')?.value && module.get('urlVideo')?.value.startsWith('https://www.youtube.com/embed/')">
+              <iframe class="iframe-custom" [src]="module.get('safeVideoUrl')?.value" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div *ngIf="!module.get('urlVideo')?.value || !module.get('urlVideo')?.value.startsWith('https://www.youtube.com/embed/')">
+              <div class="preview-message">Enter a valid URL to see the video preview here.</div>
+            </div>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="title-add-images">Add images as support material </div>
+
+        <div formArrayName="images">
+          <div *ngFor="let image of getImageControls(i).controls; let j = index" [formGroupName]="j">
+
+            <div class="section-image-container">
+              <div class="add-info-images-container">
+                <mat-form-field appearance="outline" class="form-field">
+                  <mat-label>Image Title</mat-label>
+                  <input matInput formControlName="title" maxlength="80">
+                  <mat-hint align="end">
+                    <span class="char-counter">{{(image.get('title')?.value || '').length}}/80</span>
+                  </mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="form-field">
+                  <mat-label>Image URL</mat-label>
+                  <input matInput formControlName="url" maxlength="200">
+                  <mat-hint align="end">
+                    <span class="char-counter">{{(image.get('url')?.value || '').length}}/200</span>
+                  </mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="form-field">
+                  <mat-label>Image Description</mat-label>
+                  <textarea matInput formControlName="description" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" maxlength="300"></textarea>
+                  <mat-hint align="end">
+                    <span class="char-counter">{{(image.get('description')?.value || '').length}}/300</span>
+                  </mat-hint>
+                </mat-form-field>
+              </div>
+
+              <div class="preview-image-container">
+                <div class="image-preview" *ngIf="!image.get('url')?.value">
+                  Preview Image
+                </div>
+                <div class="image-preview" *ngIf="image.get('url')?.value">
+                  <img [src]="image.get('url')?.value" alt="Image Preview">
+                </div>
+              </div>
+            </div>
+            <button mat-button class="button-image" color="warn" (click)="removeImage(i, j)">Remove Image</button>
+            <mat-divider></mat-divider>
+          </div>
+        </div>
+        <div class="step-buttons">
+          <button mat-button (click)="addImage(i)">Add Image</button>
+          <button mat-button color="warn" (click)="removeModule(i)" [disabled]="modules.length <= 1">Remove Module</button>
+        </div>
+      </mat-expansion-panel>
+    </div>
+  </div>
+
+  <button mat-button (click)="addModule()">+ Add Module</button>
+</div>
+</div>

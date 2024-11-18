@@ -1,37 +1,41 @@
-import {Component, Input} from '@angular/core';
-import {Course} from "../../models/course.entity";
+import {Component, Input, OnInit} from '@angular/core';
+import {Course} from "../../../shared/models/course/course.entity";
 import {
-  MatCard,
-  MatCardActions,
-  MatCardContent,
-  MatCardImage,
-  MatCardSubtitle,
-  MatCardTitle
+  MatCardModule
 } from "@angular/material/card";
-import {MatIcon} from "@angular/material/icon";
-import {MatButton} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 import {Router} from "@angular/router";
+import {NgIf, SlicePipe} from "@angular/common";
 
 @Component({
   selector: 'app-course-card',
   standalone: true,
   imports: [
-    MatCard,
-    MatCardTitle,
-    MatCardSubtitle,
-    MatIcon,
-    MatCardContent,
-    MatCardActions,
-    MatButton,
-    MatCardImage
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    SlicePipe,
+    NgIf
   ],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css'
 })
-export class CourseCardComponent {
+export class CourseCardComponent implements OnInit{
   @Input() course!: Course;
+  isCollectionRoute: boolean = false;
+
   constructor(private router: Router) {}
-  viewDetails(): void{
-    this.router.navigate(['/course', this.course.id]);
+
+  ngOnInit(): void {
+    this.isCollectionRoute = this.router.url.includes('/collection');
   }
+  viewDetails(): void{
+    this.router.navigate(['/course/detail/', this.course.id]);
+  }
+
+  goLearn(): void{
+    this.router.navigate(['/course-content/', this.course.id]);
+  }
+
 }

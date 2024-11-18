@@ -1,0 +1,9 @@
+<p>Wallet</p>
+<mat-tab-group>
+  <mat-tab label="My Earnings" *ngIf="userType === 'expert'">
+    <app-my-earnings [userId]="userId"></app-my-earnings>
+  </mat-tab>
+  <mat-tab label="My Purchased">
+    <app-my-purchased [userId]="userId"></app-my-purchased>
+  </mat-tab>
+</mat-tab-group>

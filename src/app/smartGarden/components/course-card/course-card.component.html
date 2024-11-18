@@ -1,19 +1,13 @@
 <mat-card class="course-card">
   <img mat-card-image src="{{ course.image }}" alt="{{ course.title }}" class="course-image">
-  <mat-card-title>
-    <span class="mat-headline-small">
-      {{ course.title }}
-    </span>
-    <span class="rating-container">
-      <mat-icon style="color: #ffffff;">star</mat-icon>
-      <span class="rating">{{ course.rating }}</span>
-    </span>
-  </mat-card-title>
+  <mat-card-header>
+    <mat-card-title>{{course.title | slice:0:40}}</mat-card-title>
+  </mat-card-header>
   <mat-card-content>
-    <p class="mat-headline-small-description">{{ course.description }}</p>
+    <p>{{ course.description | slice:0:70}}...</p>
   </mat-card-content>
   <mat-card-actions class="actions">
-    <button mat-button (click)="viewDetails()">View Details</button>
-    <button mat-button class="buy-button">Buy - Add ${{ course.price }}</button>
+    <button mat-button *ngIf="isCollectionRoute" (click)="goLearn()">Learn</button>
+    <button mat-button class="buy-button" *ngIf="!isCollectionRoute" (click)="viewDetails()">Buy for ${{ course.price }}</button>
   </mat-card-actions>
 </mat-card>

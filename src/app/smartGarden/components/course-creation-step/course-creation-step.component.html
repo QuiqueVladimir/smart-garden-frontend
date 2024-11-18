@@ -1,0 +1,49 @@
+<div class="form-container">
+  <form class="responsive-form" [formGroup]="courseForm">
+    <div class="course-details">Course Details</div>
+    <div class="title-container">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Course Title</mat-label>
+        <input matInput formControlName="title" required maxlength="100">
+        <mat-hint align="end">
+          <span class="char-counter">{{(courseForm.get('title')?.value || '').length}}/100</span>
+        </mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="description-container">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Course Description</mat-label>
+        <textarea matInput formControlName="description" required cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="10" maxlength="1000"></textarea>
+        <mat-hint align="end">
+          <span class="char-counter">{{(courseForm.get('description')?.value || '').length}}/1000</span>
+        </mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="Url-container">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Url To Image</mat-label>
+        <input matInput formControlName="image" required maxlength="800">
+        <mat-hint align="end">
+          <span class="char-counter">{{(courseForm.get('image')?.value || '').length}}/800</span>
+        </mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="price-container">
+      <mat-form-field appearance="outline" floatLabel="always" class="form-field">
+        <mat-label>Course Price</mat-label>
+        <input matInput type="number" formControlName="price" placeholder="0" min="4.99" max="199">
+        <mat-error *ngIf="courseForm.get('price')?.hasError('min')">Minimum price is 4.99</mat-error>
+        <mat-error *ngIf="courseForm.get('price')?.hasError('max')">Maximum price is 199</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+  <div class="image-preview-container">
+    <div class="image-preview" *ngIf="!imageUrl">Preview</div>
+    <div class="image-preview" *ngIf="imageUrl">
+      <img [src]="imageUrl" alt="Image Preview">
+    </div>
+  </div>
+</div>

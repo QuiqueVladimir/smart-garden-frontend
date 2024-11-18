@@ -1,0 +1,29 @@
+<mat-toolbar class="toolbar-custom">
+  <div class="community-button">
+    <button mat-button *ngIf="isOwner" (click)="navigateToCommunity()">
+      {{ hasCommunity ? 'Go to Community' : 'Create Community' }}
+    </button>
+    <button mat-button *ngIf="!isOwner && hasCommunity" (click)="navigateToCommunity()">
+      Go to Community
+    </button>
+  </div>
+</mat-toolbar>
+<div class="general-Detail">
+  <div class="course-detail-container">
+    <div class="course-info">
+      <img [src]="course.image" alt="{{ course.title }}" class="course-image">
+      <h2>{{ course.title }}</h2>
+      <p>{{ course.description }}</p>
+      <p><strong>Number of Modules:</strong> {{ course.numberModules }}</p>
+      <p><strong>Rating:</strong> {{ course.rating }}</p>
+    </div>
+  </div>
+  <div class="module-list">
+    <h3>Modules</h3>
+    <div *ngFor="let module of modules" class="module-button">
+      <button (click)="navigateToModule(module.id)">
+        {{ module.title }}
+      </button>
+    </div>
+  </div>
+</div>

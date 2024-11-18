@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  serverBasePath: undefined
+  apiUrl: `https://fake-api-smartgarden.vercel.app/`
 };

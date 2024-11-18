@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <button mat-icon-button *ngIf="searchQuery" (click)="clearSearch()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span *ngIf="!searchQuery">Explore Courses</span>
+  <span *ngIf="searchQuery && courses.length === 0">Sorry, we couldn't find any results for "{{ searchQuery }}"</span>
+  <span *ngIf="searchQuery && courses.length > 0">{{ courses.length }} results for "{{ searchQuery }}"</span>
+  </mat-toolbar>
+
+<app-course-list [courses]="courses" [loading]="loading"></app-course-list>

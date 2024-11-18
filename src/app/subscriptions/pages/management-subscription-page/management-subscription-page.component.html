@@ -1,0 +1,10 @@
+<div class="subscription-page">
+  <h1 class="page-title">Elige la membresía que te guste</h1>
+  <div class="subscription-list" *ngIf="activeSubscription">
+    <app-subscription-card
+      *ngFor="let subscription of subscriptions"
+      [subscription]="subscription"
+      [activeSubscription]="activeSubscription">
+    </app-subscription-card>
+  </div>
+</div>

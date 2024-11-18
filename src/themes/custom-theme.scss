@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$angular-material-3-theme: mat.define-theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$green-palette,
+      ),
+      density: (
+        scale: 0,
+      ),
+    )
+);
+
+:root {
+  @include mat.all-component-themes($angular-material-3-theme);
+}
+
+.dark-theme {
+  @include mat.all-component-colors($angular-material-3-theme);
+}
