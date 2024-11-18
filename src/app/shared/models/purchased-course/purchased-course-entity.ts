@@ -2,20 +2,22 @@ export class PurchasedCourse {
   id: number;
   userId: number;
   courseId: number;
-  communityAccess: string;
+  amount: number;
   purchaseDate: Date;
-
+  cardNumberMasked: string;
   constructor(purchasedCourse: {
     id: number,
     userId: number,
     courseId: number,
-    communityAccess: string,
-    purchaseDate: Date
+    amount: number,
+    purchaseDate: Date,
+    cardNumberMasked: string
   }) {
     this.id = purchasedCourse.id;
     this.userId = purchasedCourse.userId;
     this.courseId = purchasedCourse.courseId;
-    this.communityAccess = purchasedCourse.communityAccess;
+    this.amount = purchasedCourse.amount;
     this.purchaseDate = purchasedCourse.purchaseDate;
+    this.cardNumberMasked = purchasedCourse.cardNumberMasked;
   }
 }

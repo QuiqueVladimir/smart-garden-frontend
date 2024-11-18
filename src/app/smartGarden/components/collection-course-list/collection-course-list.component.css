@@ -1,0 +1,23 @@
+.course-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 750px;
+}
+
+mat-tab-group{
+  display: flex;
+  justify-content: space-around;
+}
+
+.no-elements{
+  margin: 40px auto;
+}
+
+@media (max-width: 1020px) {
+  .course-list{
+    flex-direction: column;
+    display: block;
+    flex-wrap: nowrap;
+  }
+}

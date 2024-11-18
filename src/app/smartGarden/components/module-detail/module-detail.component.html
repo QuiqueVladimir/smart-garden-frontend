@@ -19,15 +19,15 @@
     </div>
 
     <div class="image-gallery">
-      <div *ngFor="let image of module.images" class="image-item">
+      <div *ngFor="let image of module.title" class="image-item">
         <img mat-card-image src="{{ image }}" alt="{{ module.title }}" class="course-image">
       </div>
     </div>
 
     <div class="links-section">
       <ul>
-        <li *ngFor="let link of module.links">
-          <a [href]="link" target="_blank">{{module.links}}</a>
+        <li *ngFor="let link of module.title">
+          <a [href]="link" target="_blank">{{module.title}}</a>
         </li>
       </ul>
     </div>

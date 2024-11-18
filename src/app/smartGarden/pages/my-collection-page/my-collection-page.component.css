@@ -1,0 +1,15 @@
+mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #eff1f4;
+}
+
+button:not([color="warn"]) {
+  background-color: #586e80;
+  border-color: #4caf50;
+  color: #dbddda;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+

@@ -11,17 +11,20 @@ import {MatPaginatorModule, PageEvent} from "@angular/material/paginator";
 import {MatTabsModule} from "@angular/material/tabs";
 import {CommunityCardComponent} from "../community-card/community-card.component";
 import {NgForOf, NgIf} from "@angular/common";
+import {MatButton} from "@angular/material/button";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-community-list',
   standalone: true,
-  imports: [
-    MatTabsModule,
-    MatPaginatorModule,
-    CommunityCardComponent,
-    NgForOf,
-    NgIf
-  ],
+    imports: [
+        MatTabsModule,
+        MatPaginatorModule,
+        CommunityCardComponent,
+        NgForOf,
+        NgIf,
+        MatButton
+    ],
   templateUrl: './community-list.component.html',
   styleUrl: './community-list.component.css'
 })
@@ -31,37 +34,37 @@ export class CommunityListComponent implements OnInit{
   paginatedPurchasedCommunities: Community[] = [];
   paginatedOwnedCommunities: Community[] = [];
   userId: number;
-  usertype: string;
+  userType: string;
 
   constructor(
     private communityPurchasedCoursesService: CommunityPurchasedCoursesService,
     private communityService: CommunityService,
-    private courseService: CourseService
+    private courseService: CourseService,
+    private router: Router
   ) {
     const user = JSON.parse(sessionStorage.getItem('user') || '{}');
     this.userId = user.id || null;
-    this.usertype = user.type || null;
+    this.userType = user.type || null;
   }
 
   ngOnInit(): void {
-    this.communityPurchasedCoursesService.getPurchasedCoursesAndCommunityActiveByUserId(this.userId)
+    this.communityPurchasedCoursesService.getPurchasedCoursesByUserId(this.userId)
       .subscribe((purchasedCourses: PurchasedCourse[]) => {
         purchasedCourses.forEach(purchasedCourse => {
-          this.courseService.getCourseById(purchasedCourse.courseId).subscribe((course: Course) => {
-            if (course.communityId) {
-              this.communityService.getCommunityById(course.communityId).subscribe((community: Community) => {
+          this.communityService.getCommunityByCourseId(purchasedCourse.courseId)
+            .subscribe((community: Community) => {
+              if (community.status === "available") {
                 this.purchasedCommunities.push(community);
                 this.updatePaginatedPurchasedCommunities({ pageIndex: 0, pageSize: 10, length: this.purchasedCommunities.length });
-              });
-            }
-          });
+              }
+            });
         });
       });
 
     this.ownedCommunities = [...this.purchasedCommunities];
     this.updatePaginatedOwnedCommunities({ pageIndex: 0, pageSize: 10, length: this.ownedCommunities.length });
 
-    if(this.usertype === 'expert') {
+    if(this.userType === 'expert') {
       this.communityService.getCommunitiesByExpertId(this.userId).subscribe((communities: Community[]) => {
         this.ownedCommunities = communities;
         this.updatePaginatedOwnedCommunities({ pageIndex: 0, pageSize: 10, length: this.ownedCommunities.length });
@@ -81,5 +84,13 @@ export class CommunityListComponent implements OnInit{
     this.paginatedOwnedCommunities = this.ownedCommunities.slice(startIndex, endIndex);
   }
 
+  redirectToExplore(): void {
+    this.router.navigate(['/explore']);
+  }
+
+  isExpert(): boolean {
+    if(this.userType==='expert') return true;
+    else return false;
+  }
 
 }

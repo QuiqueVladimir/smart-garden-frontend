@@ -18,6 +18,14 @@ import {AuthGuard} from "./auth.guard";
 import {
   CommunitiesManagementPageComponent
 } from "./communities/pages/communities-management-page/communities-management-page.component";
+import {MyCollectionPageComponent} from "./smartGarden/pages/my-collection-page/my-collection-page.component";
+import {ExploreCoursePageComponent} from "./smartGarden/pages/explore-course-page/explore-course-page.component";
+import {CourseCreatePageComponent} from "./smartGarden/pages/course-create-page/course-create-page.component";
+import {PreviewCoursePageComponent} from "./smartGarden/pages/preview-course-page/preview-course-page.component";
+import {
+  CourseContentViewPageComponent
+} from "./smartGarden/pages/course-content-view-page/course-content-view-page.component";
+import {WalletPageComponent} from "./wallet/pages/wallet-page/wallet-page.component";
 
 
 
@@ -31,12 +39,16 @@ export const routes: Routes = [
     children: [
       { path: '', component: CourseListComponent},
       { path: 'home', redirectTo: 'list'},
-      { path: "list", component: CourseListComponent},
+      { path: 'explore', component: ExploreCoursePageComponent},
+      { path: "collection", component: MyCollectionPageComponent},
       { path: "communities", component: CommunitiesManagementPageComponent},
-      {path: "communities/:id", component: CommunityPageComponent},
+      { path: "communities/:id", component: CommunityPageComponent},
       { path: "subscriptions", component: ManagementSubscriptionPageComponent},
-      { path: "course/:courseId", component: CourseDetailComponent},
-      { path: "courses/:courseId/modules/:moduleId",  component: ModuleDetailComponent}
+      { path: "course/create", component: CourseCreatePageComponent},
+      { path: "course-content/:courseId", component: CourseContentViewPageComponent},
+      { path: "course/:courseId/module/:moduleId",  component: ModuleDetailComponent},
+      { path: "course/detail/:courseId", component: PreviewCoursePageComponent},
+      { path: "wallet", component: WalletPageComponent}
     ]},
   { path: '**', component: PageNotFoundComponent }
 ];

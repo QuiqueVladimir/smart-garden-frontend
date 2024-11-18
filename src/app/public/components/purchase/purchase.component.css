@@ -1,0 +1,82 @@
+.purchase-card {
+  max-width: 350px;
+  max-height: 830px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  border-color: #333333;
+  background-color: #fff;
+}
+
+mat-card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #5d627e;
+}
+
+mat-card-header {
+  padding: 15px;
+  background-image: url('/assets/images/leaves.png');
+  background-repeat: repeat;
+}
+
+.purchase-card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.purchase-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+
+mat-divider {
+  margin: 16px 0;
+}
+
+.purchase-card button {
+  width: 100%;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #0498b8;
+  background-color: #d4edda;
+}
+
+.purchase-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-card mat-form-field {
+  margin-bottom: 16px;
+}
+
+.another-click {
+  color: blue;
+  background-color: transparent !important;
+  text-decoration: underline;
+}
+
+.add-payment {
+  background-color: transparent !important;
+  margin-top: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.purchase-card[_ngcontent-ng-c3695627516] mat-form-field[_ngcontent-ng-c3695627516] {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .purchase-card {
+    max-width: 100%;
+  }
+}

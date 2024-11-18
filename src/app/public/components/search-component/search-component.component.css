@@ -1,0 +1,32 @@
+.custom-search-container {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 10px;
+
+  .custom-input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    width: 350px;
+    background-color: transparent;
+  }
+
+  .custom-search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: #666;
+    cursor: pointer;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}

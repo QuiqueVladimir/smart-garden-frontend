@@ -11,6 +11,10 @@ mat-tab-group {
   justify-content: space-around;
 }
 
+.no-elements{
+  margin: 40px auto;
+}
+
 @media (max-width: 1020px) {
   .community-list {
     flex-direction: column;

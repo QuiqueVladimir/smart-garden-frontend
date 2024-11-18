@@ -12,7 +12,7 @@ import {MatButtonModule} from "@angular/material/button";
   styleUrl: './page-not-found.component.css'
 })
 export class PageNotFoundComponent implements OnInit{
-  redirectUrl: string = '/';
+  redirectUrl: string = '/explore';
 
   constructor(
     private route: ActivatedRoute,
@@ -20,10 +20,10 @@ export class PageNotFoundComponent implements OnInit{
   ) {}
   ngOnInit(): void {
     this.route.queryParams.subscribe(params =>{
-      this.redirectUrl = params['redirectUrl'] || '/';
+      this.redirectUrl = params['redirectUrl'] || '/explore';
       setTimeout(()=>{
         this.router.navigate([this.redirectUrl]);
-      }, 10000);
+      });
     });
   }
   onGoBack(): void {

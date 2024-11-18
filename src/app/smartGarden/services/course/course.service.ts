@@ -13,6 +13,10 @@ export class CourseService extends BaseService<Course> {
     super('/courses');
   }
 
+  addCourse(course: Course): Observable<Course>{
+    return this.create(course);
+  }
+
   public getModulesByCurseId(courseId: number): Observable<Module[]>{
     return this.http.get<Module[]>(`${this.resourcePath()}/${courseId}/modules`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
@@ -28,14 +32,23 @@ export class CourseService extends BaseService<Course> {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  public addModule(courseId: number, module: Module): Observable<Module>{
-    return this.http.post<Module>(`${this.resourcePath()}/${courseId}/modules`, JSON.stringify(module), this.httpOptions)
+  getCoursesByIds(courseIds: number[]): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.resourcePath()}?ids=${courseIds.join(',')}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  public deleteModule(courseId: number, moduleId: number): Observable<void>{
-    return this.http.delete<void>(`${this.resourcePath()}/${courseId}/modules/${moduleId}`, this.httpOptions)
+  public getCoursePublishedByExpertId(expertId: number): Observable<Course[]>{
+    return this.http.get<Course[]>(`${this.resourcePath()}?expertId=${expertId}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
+  }
+
+  public searchCourses(query: string): Observable<Course[]> {
+    return this.http.get<Course[]>(`${this.resourcePath()}?title=${query}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  updateCourse(courseId: number, updateData: Partial<Course>): Observable<Course> {
+    return this.http.patch<Course>(`${this.resourcePath()}/${courseId}`, updateData);
   }
 }
 

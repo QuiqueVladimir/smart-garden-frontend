@@ -4,7 +4,7 @@ export class Course {
   description: string;
   image: string;
   expertId: number;
-  communityId: number;
+  communityId: number | null;
   price: number;
   rating: number;
   numberModules: number;
@@ -14,7 +14,7 @@ export class Course {
     description: string,
     image?: string,
     expertId: number,
-    communityId?: number,
+    communityId?: number | null,
     price?: number,
     rating?: number,
     numberModules?: number}){

@@ -1,45 +1,46 @@
-import {Component, OnInit} from '@angular/core';
-import {CourseService} from "../../services/course/course.service";
+import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
 import {Course} from "../../../shared/models/course/course.entity";
 import {CourseCardComponent} from "../course-card/course-card.component";
-import {NgForOf} from "@angular/common";
-import {MatPaginator} from "@angular/material/paginator";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {PageEvent} from "@angular/material/paginator";
+import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-course-list',
   standalone: true,
   imports: [
     CourseCardComponent,
+    MatPaginatorModule,
     NgForOf,
-    MatPaginator
+    NgIf
   ],
   templateUrl: './course-list.component.html',
   styleUrl: './course-list.component.css'
 })
 export class CourseListComponent implements OnInit {
-  courses: Course[] = [];
-  listCourses: Course[] = [];
-  totalCourses: number = 0;
-  coursesPerPage: number = 6;
-  currentPage: number = 0;
-constructor(private courseService: CourseService) { }
+  @Input() courses: Course[] = [];
+  @Input() loading = false;
+  paginatedCourses: Course[] = [];
+  pageSize = 4;
+  coursesPerPage = 12;
 
-  ngOnInit(): void {
-  this.courseService.getAll().subscribe((courses: Course[]) => {
-    this.courses = courses;
-    this.totalCourses = this.courses.length;
-    this.paginateCourses();
-  });
+  constructor() {}
+
+  ngOnInit() {
+    this.updatePaginatedCourses({ pageIndex: 0, pageSize: this.coursesPerPage, length: this.courses.length });
   }
 
-  paginateCourses(): void{
-  const startIndex = this.currentPage * this.coursesPerPage;
-  const endIndex = startIndex + this.coursesPerPage;
-  this.listCourses = this.courses.slice(startIndex, endIndex);
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['courses']) {
+      this.updatePaginatedCourses({ pageIndex: 0, pageSize: this.coursesPerPage, length: this.courses.length });
+    }
   }
 
-  onPageChange(event: any): void{
-  this.currentPage = event.pageIndex;
-  this.paginateCourses();
+  updatePaginatedCourses(event: PageEvent): void {
+    const startIndex = event.pageIndex * event.pageSize;
+    const endIndex = startIndex + event.pageSize;
+    this.paginatedCourses = this.courses.slice(startIndex, endIndex);
   }
+
 }
+

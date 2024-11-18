@@ -11,19 +11,26 @@ export class PurchasedCoursesService extends BaseService<PurchasedCourse>{
     super('/purchasedCourses');
   }
 
+  addPurchasedCourse(purchasedCourse: PurchasedCourse): Observable<PurchasedCourse> {
+    return this.create(purchasedCourse);
+  }
+
   getPurchasedCoursesByUserId(userId: number): Observable<PurchasedCourse[]> {
     return this.http.get<PurchasedCourse[]>(`${this.resourcePath()}?userId=${userId}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  hasCommunityAccess(userId: number, courseId: number): Observable<boolean> {
-    return this.http.get<PurchasedCourse[]>(`${this.resourcePath()}?userId=${userId}&courseId=${courseId}`)
+  getPurchasesByCourseIds(courseIds: number[]): Observable<PurchasedCourse[]> {
+    return this.http.get<PurchasedCourse[]>(`${this.resourcePath()}?courseIds=${courseIds.join(',')}`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  userHasThisCourse(userId: number, courseId: number): Observable<boolean> {
+    return this.http.get<boolean[]>(`${this.resourcePath()}?userId=${userId}&courseId=${courseId}`)
       .pipe(
-        map(courses => courses.some(course => course.communityAccess === 'active')),
-        catchError(error => {
-          console.error('Error checking community access', error);
-          return of(false);
-        })
+        retry(2),
+        map(response => response.length > 0),
+        catchError(() => of(false))
       );
   }
 

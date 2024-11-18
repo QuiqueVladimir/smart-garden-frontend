@@ -15,6 +15,7 @@ import {
   CommunityPurchasedCoursesService
 } from "../../services/community-purchased-courses/community-purchased-courses.service";
 import {CommunityEditDialogComponent} from "../../components/community-edit-dialog/community-edit-dialog.component";
+import {BannedService} from "../../services/banned-management/banned.service";
 
 
 @Component({
@@ -39,6 +40,7 @@ export class CommunityPageComponent implements OnInit {
 
   constructor(private communityService: CommunityService,
               private communityPurchasedCoursesService: CommunityPurchasedCoursesService,
+              private bannedService: BannedService,
               private route: ActivatedRoute,
               private dialog: MatDialog,
               private router: Router
@@ -70,14 +72,28 @@ export class CommunityPageComponent implements OnInit {
       if (this.isExpert()) {
         return;
       }
-      this.communityPurchasedCoursesService.hasAccessToCommunity(this.userId, this.community.id).subscribe(
-        (hasAccess) => {
-          if (!hasAccess) {
-            this.showAccessDeniedDialog('You do not have access to this community', '/communities');
+      this.bannedService.userIsBanned(this.userId, this.community.id).subscribe(
+        (isBanned) => {
+          if (isBanned) {
+            this.showAccessDeniedDialog('You are banned from this community', '/communities');
+          } else if (this.community.status === 'available') {
+            this.communityPurchasedCoursesService.hasAccessToCommunity(this.userId, this.community.id).subscribe(
+              (hasAccess) => {
+                if (!hasAccess) {
+                  this.showAccessDeniedDialog('You do not have access to this community because you have not purchased the associated course', '/communities');
+                }
+              },
+              (error) => {
+                console.error('Error checking access: ', error);
+                this.showAccessDeniedDialog('You do not have access to this community', '/communities');
+              }
+            );
+          } else{
+            this.showAccessDeniedDialog('This community is not available', '/communities');
           }
         },
         (error) => {
-          console.error('Error checking access: ', error);
+          console.error('Error checking ban status: ', error);
           this.showAccessDeniedDialog('You do not have access to this community', '/communities');
         }
       );
@@ -101,7 +117,7 @@ export class CommunityPageComponent implements OnInit {
   }
 
   viewCourse(): void {
-    this.router.navigate([`/course/${this.community.courseId}`]);
+    this.router.navigate([`/course-content/${this.community.courseId}`]);
   }
 
   isExpert(): boolean {

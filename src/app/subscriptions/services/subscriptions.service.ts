@@ -9,7 +9,7 @@ import {SubscriptionsUser} from "../models/subscriptions-user";
 })
 export class SubscriptionsService extends BaseService<SubscriptionsUser>{
   constructor() {
-    super('/subscriptions-users');
+    super('/subscriptionsUsers');
   }
   getActiveSubscription(userId: number): Observable<SubscriptionsUser | null> {
     return this.http.get<any[]>(`${this.resourcePath()}?userId=${userId}&status=active`).pipe(

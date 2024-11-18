@@ -1,0 +1,10 @@
+mat-toolbar {
+  height: 80px;
+  background-color: #eff1f4;
+  user-select: none;
+}
+
+app-course-list {
+
+}
+

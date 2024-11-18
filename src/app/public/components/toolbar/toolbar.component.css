@@ -2,10 +2,17 @@
   flex-grow: 1;
 }
 
+.app-search-component {
+  height: 30px;
+  user-select: none;
+}
+
 .mat-toolbar {
-  background-color: #fdfdfe;
-  color: #656b67;
-  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.28); /* Adjusted for bottom shadow */
+  background-image: url('/assets/images/leaves.png');
+  backdrop-filter: blur(10px);
+  background-repeat: repeat;
+  color: #46594e;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.28);
 }
 
 .profile-image {

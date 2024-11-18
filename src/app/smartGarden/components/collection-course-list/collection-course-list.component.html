@@ -1,0 +1,28 @@
+<mat-tab-group>
+  <mat-tab label="Published Courses" *ngIf="isExpert()">
+    <div class="course-list">
+      <div *ngIf="paginatedPublishedCourses.length === 0" class="no-elements">
+        When you publish a course, it will appear here.
+        <button mat-button class="link-button" (click)="redirectToExplore()">Publish now.</button>
+      </div>
+      <app-course-card *ngFor="let course of paginatedPublishedCourses" [course]="course"></app-course-card>
+    </div>
+    <mat-paginator [length]="publishedCourses.length"
+                   [pageSize]="9"
+                   (page)="updatePaginatedPublishedCourses($event)">
+    </mat-paginator>
+  </mat-tab>
+  <mat-tab label="Purchased Courses">
+    <div class="course-list">
+      <div *ngIf="paginatedPurchasedCourses.length === 0" class="no-elements">
+        When you purchase a course, it will appear here.
+        <button mat-button class="link-button" (click)="redirectToExplore()">Check it out now.</button>
+      </div>
+      <app-course-card *ngFor="let course of paginatedPurchasedCourses" [course]="course"></app-course-card>
+    </div>
+    <mat-paginator [length]="purchasedCourses.length"
+                   [pageSize]="9"
+                   (page)="updatePaginatedPurchasedCourses($event)">
+    </mat-paginator>
+  </mat-tab>
+</mat-tab-group>

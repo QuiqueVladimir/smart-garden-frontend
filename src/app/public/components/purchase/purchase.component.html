@@ -1,0 +1,66 @@
+<mat-card class="purchase-card">
+  <mat-card-header>
+    <mat-card-title>Purchase Summary</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-subtitle>Type of product: Course</mat-card-subtitle>
+    <p>{{ course.title }}</p>
+    <p>Number of Modules: {{ course.numberModules }}</p>
+    <mat-divider/>
+    <p><strong>Payment method:</strong></p>
+    <div *ngIf="paymentMethods.length > 0 && !showForm; else addCardForm">
+      <mat-radio-group [(ngModel)]="selectedCardId">
+        <mat-radio-button *ngFor="let method of paymentMethods" [value]="method.id">
+          {{ method.cardNumber | maskCardNumber }}
+        </mat-radio-button>
+      </mat-radio-group>
+      <button mat-button class="another-click" (click)="showAddCardForm()">Use another</button>
+    </div>
+    <ng-template #addCardForm>
+      <form class="responsive" [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline">
+          <mat-label>Card Holder</mat-label>
+          <input matInput type="text" formControlName="cardHolder" required maxlength="50">
+          <mat-hint align="end">
+            <span class="char-counter">{{(paymentForm.get('cardHolder')?.value || '').length}}/50</span>
+          </mat-hint>
+          <mat-error *ngIf="paymentForm.get('cardHolder')?.errors?.['required']">Card holder is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Card Number</mat-label>
+          <input matInput type="text" formControlName="cardNumber" required maxlength="16">
+          <mat-hint align="end">
+            <span class="char-counter">{{(paymentForm.get('cardNumber')?.value || '').length}}/16</span>
+          </mat-hint>
+          <mat-error *ngIf="paymentForm.get('cardNumber')?.errors?.['pattern']">Invalid card number</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Expiration Date</mat-label>
+          <input matInput type="text" formControlName="expirationDate" required maxlength="5">
+          <mat-hint align="end">
+            <span class="char-counter">{{(paymentForm.get('expirationDate')?.value || '').length}}/5</span>
+          </mat-hint>
+          <mat-error *ngIf="paymentForm.get('expirationDate')?.errors?.['pattern']">Invalid expiration date</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>CVV</mat-label>
+          <input matInput type="text" formControlName="cvv" required maxlength="3">
+          <mat-hint align="end">
+            <span class="char-counter">{{(paymentForm.get('cvv')?.value || '').length}}/3</span>
+          </mat-hint>
+          <mat-error *ngIf="paymentForm.get('cvv')?.errors?.['pattern']">Invalid CVV</mat-error>
+        </mat-form-field>
+        <mat-slide-toggle formControlName="saveCard">Save Card</mat-slide-toggle>
+        <div class="form-actions">
+          <button mat-raised-button class="add-payment" type="submit" [disabled]="!paymentForm.valid">Add payment method</button>
+          <button mat-button class="add-payment" type="button" (click)="cancelAddCard()" *ngIf="paymentMethods.length > 0">Cancel</button>
+        </div>
+      </form>
+    </ng-template>
+    <mat-divider/>
+    <p><strong>Price:</strong> ${{ course.price }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="buyCourse()" [disabled]="!selectedCardId">Pay</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,29 +1,23 @@
-.course-container {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 94vh;
-  justify-content: center;
-  align-items: center;
+.course-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 750px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.course-card-container {
-  flex: 1 0 400px;
-  margin: 10px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+mat-tab-group{
+    display: flex;
+    justify-content: space-around;
 }
 
-
-mat-paginator {
-  width: 100%;
-  margin-top: 20px;
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  color: #333333;
+@media (max-width: 1020px) {
+  .course-list{
+    flex-direction: column;
+    display: block;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

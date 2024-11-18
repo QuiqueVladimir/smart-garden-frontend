@@ -1,0 +1,5 @@
+<mat-toolbar class="header">
+  <span>My Collection</span>
+  <button mat-button *ngIf="isExpert()" (click)="goCreatePage()" >Create New Course</button>
+</mat-toolbar>
+<app-collection-course-list/>
