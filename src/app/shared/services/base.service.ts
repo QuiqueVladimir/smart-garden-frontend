@@ -7,7 +7,7 @@ protected httpOptions={ headers: new HttpHeaders({'Content-Type':'application/js
 
 protected http:HttpClient = inject(HttpClient);
 
-protected basePath: string = `http://localhost:3000`;
+protected basePath: string = `https://backend-smartgarden-cybzh9eacxc9edgq.canadacentral-01.azurewebsites.net/`;
 
 protected resourceEndPoint: string = '/resources';
 
